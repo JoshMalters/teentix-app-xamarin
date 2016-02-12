@@ -14,6 +14,11 @@ namespace TeenTix.Common.Model
 		public Account ()
 		{
 		}
+
+		public override string ToString ()
+		{
+			return string.Format ("[Account: FirstName={0}, LastName={1}, BirthDate={2}, Email={3}, Username={4}, Password={5}]", FirstName, LastName, BirthDate, Email, Username, Password);
+		}
 	}
 }
 
