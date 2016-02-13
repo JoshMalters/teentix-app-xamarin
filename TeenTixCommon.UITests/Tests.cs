@@ -47,6 +47,20 @@ namespace TeenTix.Common.UITests
 			bool result = await AccountManager.IsEmailAvailable (email);
 			Assert.IsFalse (result);
 		}
+
+		[Test]
+		public async void IsUsernameAvailable_ShouldBeAvailable() {
+			string username = "thomas" + Guid.NewGuid ().ToString ();
+			bool result = await AccountManager.IsUsernameAvailable (username);
+			Assert.IsTrue (result);
+		}
+
+		[Test]
+		public async void IsUsernameAvailable_NotAvailable() {
+			string username = "teentix";
+			bool result = await AccountManager.IsUsernameAvailable (username);
+			Assert.IsFalse (result);
+		}
 	}
 }
 
