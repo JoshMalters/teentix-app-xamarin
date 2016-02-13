@@ -20,7 +20,9 @@ namespace TeenTixMobileNEW
 		{
 			base.ViewDidLoad ();
 
-			SignUpNextButton.TouchUpInside += (object sender, EventArgs e) => {
+			
+			// TODO: make async! (thomasvandoren, 2016-02-11)
+			SignUpNextButton.TouchUpInside +=  (object sender, EventArgs e) => {
 
 
 				var account = new Account();
