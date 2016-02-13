@@ -16,10 +16,6 @@ namespace TeenTixMobileNEW
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel EmailMessage { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField SignUpBirthdate { get; set; }
 
 		[Outlet]
@@ -46,16 +42,8 @@ namespace TeenTixMobileNEW
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField SignUpUsername { get; set; }
 
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel UsernameMessage { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (EmailMessage != null) {
-				EmailMessage.Dispose ();
-				EmailMessage = null;
-			}
 			if (SignUpBirthdate != null) {
 				SignUpBirthdate.Dispose ();
 				SignUpBirthdate = null;
@@ -83,10 +71,6 @@ namespace TeenTixMobileNEW
 			if (SignUpUsername != null) {
 				SignUpUsername.Dispose ();
 				SignUpUsername = null;
-			}
-			if (UsernameMessage != null) {
-				UsernameMessage.Dispose ();
-				UsernameMessage = null;
 			}
 		}
 	}
