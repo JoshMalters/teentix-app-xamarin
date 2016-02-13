@@ -20,27 +20,6 @@ namespace TeenTixMobileNEW
 		{
 			base.ViewDidLoad ();
 
-			SignUpEmail.EditingDidEnd += async (object sender, EventArgs e) => {
-				string email = SignUpEmail.Text;
-				bool results = await AccountManager.IsEmailAvailable (email);
-
-				Console.WriteLine(email + results);
-				if (results) {
-					EmailMessage.Text = "Your Email is Valid";
-				} else {
-					EmailMessage.Text = "Your Email is not Valid";
-				}
-			};
-
-			SignUpUsername.EditingDidEnd += async (object sender, EventArgs e) => {
-				string username = SignUpUsername.Text;
-				bool results = await AccountManager.IsUsernameAvailable(username);
-				if (results) {
-					UsernameMessage.Text = "Your Username is Valid";
-				} else {
-					UsernameMessage.Text = "Your Username is not Valid";
-				}
-			};
 			
 			// TODO: make async! (thomasvandoren, 2016-02-11)
 			SignUpNextButton.TouchUpInside +=  (object sender, EventArgs e) => {
