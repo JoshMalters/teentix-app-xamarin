@@ -61,6 +61,30 @@ namespace TeenTix.Common.UITests
 			bool result = await AccountManager.IsUsernameAvailable (username);
 			Assert.IsFalse (result);
 		}
+
+		[Test]
+		public async void CreateAccount() {
+			var signUpAccount = new SignUpAccount();
+			signUpAccount.Email = "thomas@THIS-IS-A-FAKE-EMAIL.com";
+			signUpAccount.ScreenName = "thomas-test-" + Guid.NewGuid().ToString();
+			signUpAccount.Password = "000000";
+			signUpAccount.AgreedToTOS = true;
+
+			var createdAccount = await AccountManager.CreateAccount (signUpAccount);
+
+			Assert.GreaterOrEqual (createdAccount.Id, 1);
+//			createdAccount.Id.Should ().BeGreaterOrEqualTo (1);
+//			createdAccount.Email.ShouldBeEquivalentTo (signUpAccount.Email);
+//			createdAccount.Username.ShouldBeEquivalentTo (signUpAccount.Email);
+//			createdAccount.ScreenName.ShouldBeEquivalentTo (signUpAccount.ScreenName);
+//			createdAccount.Password.ShouldBeEquivalentTo (signUpAccount.Password);
+		}
+
+		[Ignore]
+		[Test]
+		public async void CreateAccount_DidNotAgreeToTOS() {
+			// FIXME: do it! (thomasvandoren, 2016-02-13)
+		}
 	}
 }
 

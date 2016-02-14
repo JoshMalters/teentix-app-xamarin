@@ -25,15 +25,15 @@ namespace TeenTixMobileNEW
 			SignUpNextButton.TouchUpInside +=  (object sender, EventArgs e) => {
 
 
-				var account = new Account();
-				account.FirstName = SignUpFirstName.Text;
-				account.LastName = SignUpLastName.Text;
-				account.BirthDate = SignUpBirthdate.Text;
-				account.Email = SignUpEmail.Text;
-				account.Username = SignUpUsername.Text;
-				account.Password = SignUpPassword.Text;
+//				var account = new Account();
+//				account.FirstName = SignUpFirstName.Text;
+//				account.LastName = SignUpLastName.Text;
+//				account.BirthDate = SignUpBirthdate.Text;
+//				account.Email = SignUpEmail.Text;
+//				account.Username = SignUpUsername.Text;
+//				account.Password = SignUpPassword.Text;
 
-				AccountManager.CreateAccount(account);
+				//AccountManager.CreateAccount(account);
 
 			};
 
