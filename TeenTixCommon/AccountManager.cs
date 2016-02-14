@@ -15,6 +15,9 @@ namespace TeenTix.Common
 	{
 		private static string HOST_URL = "http://localhost:9000";
 
+		// New accounts are assigned to group 4, which is "Pending email verification".
+		private static string DEFAULT_SIGN_UP_GROUP = "4";
+
 		public AccountManager ()
 		{
 		}
@@ -35,12 +38,45 @@ namespace TeenTix.Common
 			return CheckTrueFalseResult (content, url);
 		}
 
-		public static void CreateAccount(Account newAccount) {
+		public static async Task<Account> CreateAccount(SignUpAccount newAccount) {
 			Debug.WriteLine ("Creating new account: {0}", newAccount.ToString ());
 
+			var qs = queryString (
+				queryParam ("auth[api_key]", "28de9268-245b-4a75-8615-d4787c7d6b02"),
+				queryParam ("data[username]", newAccount.Email),
+				queryParam ("data[email]", newAccount.Email),
+				queryParam ("data[screen_name]", newAccount.ScreenName),
+				queryParam ("data[password]", newAccount.Password),
+				queryParam ("data[group_id]", DEFAULT_SIGN_UP_GROUP)
+			);
 
+			var url = GetUrl ("/webservice/rest/create_member" + qs);
 
+			string responseBody = await GetRequest (url);
 
+			var response = JsonConvert.DeserializeObject<SignUpResponse> (responseBody);
+			Debug.WriteLine ("Create account response: {0}", response);
+
+			var account = new Account ();
+			account.Id = response.Id;
+			account.Email = newAccount.Email;
+			account.Username = newAccount.Email;
+			account.ScreenName = newAccount.ScreenName;
+			account.FirstName = newAccount.FirstName;
+			account.LastName = newAccount.LastName;
+			account.BirthDate = newAccount.BirthDate;
+			account.AgreedToTOS = newAccount.AgreedToTOS;
+
+			return account;
+		}
+
+		private static string queryParam(string key, string value) {
+			// TODO: urlencode keys and values! (thomasvandoren, 2016-02-13)
+			return string.Format ("{0}={1}", key, value);
+		}
+
+		private static string queryString(params string[] paramList) {
+			return "?" + string.Join ("&", paramList);
 		}
 
 		private static Uri GetUrl(string path) {
