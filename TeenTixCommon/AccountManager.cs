@@ -22,7 +22,7 @@ namespace TeenTix.Common
 		public static async Task<bool> IsUsernameAvailable(string username) {
 			// FIXME: sanitize username! (thomasvandoren, 2016-02-13)
 
-			var url = getUri ("/_ajax/screen_name_check/" + username);
+			var url = GetUrl ("/_ajax/screen_name_check/" + username);
 			var content = await GetRequest (url);
 			return CheckTrueFalseResult (content, url);
 		}
@@ -30,7 +30,7 @@ namespace TeenTix.Common
 		public static async Task<bool> IsEmailAvailable(string email) {
 			// FIXME: sanitize email address! (thomasvandoren, 2016-02-11)
 
-			var url = getUri("/_ajax/email_check/" + email);
+			var url = GetUrl("/_ajax/email_check/" + email);
 			var content = await GetRequest (url);
 			return CheckTrueFalseResult (content, url);
 		}
@@ -43,8 +43,8 @@ namespace TeenTix.Common
 
 		}
 
-		private static Uri getUri(string path) {
-			return new Uri( string.Format (HOST_URL + path));
+		private static Uri GetUrl(string path) {
+			return new Uri (HOST_URL + path);
 		}
 
 		private static async Task<string> GetRequest(Uri url) {
