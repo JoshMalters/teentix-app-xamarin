@@ -35,6 +35,9 @@
     <Reference Include="Xamarin.UITest">
       <HintPath>..\packages\Xamarin.UITest.1.1.1\lib\Xamarin.UITest.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests.cs" />

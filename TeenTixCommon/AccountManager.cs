@@ -41,13 +41,17 @@ namespace TeenTix.Common
 		public static async Task<Account> CreateAccount(SignUpAccount newAccount) {
 			Debug.WriteLine ("Creating new account: {0}", newAccount.ToString ());
 
-			var qs = queryString (
-				queryParam ("auth[api_key]", "28de9268-245b-4a75-8615-d4787c7d6b02"),
-				queryParam ("data[username]", newAccount.Email),
-				queryParam ("data[email]", newAccount.Email),
-				queryParam ("data[screen_name]", newAccount.ScreenName),
-				queryParam ("data[password]", newAccount.Password),
-				queryParam ("data[group_id]", DEFAULT_SIGN_UP_GROUP)
+			if (!newAccount.AgreedToTOS) {
+				throw new DidNotAgreeToTOSException ("TOS must be agreed to before creating account!");
+			}
+
+			var qs = QueryString (
+				QueryParam ("auth[api_key]", "28de9268-245b-4a75-8615-d4787c7d6b02"),
+				QueryParam ("data[username]", newAccount.Email),
+				QueryParam ("data[email]", newAccount.Email),
+				QueryParam ("data[screen_name]", newAccount.ScreenName),
+				QueryParam ("data[password]", newAccount.Password),
+				QueryParam ("data[group_id]", DEFAULT_SIGN_UP_GROUP)
 			);
 
 			var url = GetUrl ("/webservice/rest/create_member" + qs);
@@ -70,12 +74,12 @@ namespace TeenTix.Common
 			return account;
 		}
 
-		private static string queryParam(string key, string value) {
+		private static string QueryParam(string key, string value) {
 			// TODO: urlencode keys and values! (thomasvandoren, 2016-02-13)
 			return string.Format ("{0}={1}", key, value);
 		}
 
-		private static string queryString(params string[] paramList) {
+		private static string QueryString(params string[] paramList) {
 			return "?" + string.Join ("&", paramList);
 		}
 
@@ -112,7 +116,6 @@ namespace TeenTix.Common
 				throw new ParseResponseException (message);
 			}
 		}
-
 	}
 }
 
