@@ -39,6 +39,8 @@
     <Compile Include="Model\SignUpResponseMetadata.cs" />
     <Compile Include="Model\SignUpResponse.cs" />
     <Compile Include="Exceptions\DidNotAgreeToTOSException.cs" />
+    <Compile Include="Exceptions\AccountCreationFailureException.cs" />
+    <Compile Include="Exceptions\TeenTixException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

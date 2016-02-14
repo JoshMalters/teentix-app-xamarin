@@ -61,6 +61,11 @@ namespace TeenTix.Common
 			var response = JsonConvert.DeserializeObject<SignUpResponse> (responseBody);
 			Debug.WriteLine ("Create account response: {0}", response);
 
+			if (!response.Success) {
+				Debug.WriteLine ("Account creation failed with message: {0}", response.Message);
+				throw new AccountCreationFailureException (response.Message);
+			}
+
 			var account = new Account ();
 			account.Id = response.Id;
 			account.Email = newAccount.Email;
@@ -70,6 +75,7 @@ namespace TeenTix.Common
 			account.LastName = newAccount.LastName;
 			account.BirthDate = newAccount.BirthDate;
 			account.AgreedToTOS = newAccount.AgreedToTOS;
+			account.Password = newAccount.Password;
 
 			return account;
 		}
