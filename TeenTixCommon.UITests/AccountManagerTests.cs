@@ -66,14 +66,16 @@ namespace TeenTix.Common.UITests
 			var createdAccount = await AccountManager.CreateAccount (signUpAccount);
 
 			Console.WriteLine ("Created account: {0}", createdAccount);
-			CheckAccount (createdAccount, signUpAccount);
+			createdAccount.Success.Should ().BeTrue ();
+			CheckAccount (createdAccount.Account, signUpAccount);
 		}
 
 		[Test]
 		public async void CreateAccount_ScreenNameTooLong() {
 			var signUpAccount = GetAccount ("test-" + Guid.NewGuid().ToString() + Guid.NewGuid().ToString());
 			var createdAccount = await AccountManager.CreateAccount(signUpAccount);
-			CheckAccount(createdAccount, signUpAccount);
+			createdAccount.Success.Should ().BeFalse ();
+			createdAccount.Account.Should ().BeNull ();
 		}
 
 		[Test]
@@ -81,7 +83,8 @@ namespace TeenTix.Common.UITests
 			var signUpAccount = GetAccount ("test-" + RandomInt ());
 			signUpAccount.Password = "0123456789012345678901234567890123456789012345678901234567890123456789";
 			var createdAccount = await AccountManager.CreateAccount (signUpAccount);
-			CheckAccount (createdAccount, signUpAccount);
+			createdAccount.Success.Should ().BeFalse ();
+			createdAccount.Account.Should ().BeNull ();
 		}
 
 		[Test]
@@ -89,7 +92,8 @@ namespace TeenTix.Common.UITests
 			var signUpAccount = GetAccount ("test-" + RandomInt ());
 			signUpAccount.AgreedToTOS = false;
 			var createdAccount = await AccountManager.CreateAccount(signUpAccount);
-			CheckAccount(createdAccount, signUpAccount);
+			createdAccount.Success.Should ().BeFalse ();
+			createdAccount.Account.Should ().BeNull ();
 		}
 
 		private static SignUpAccount GetAccount(string screenName) {

@@ -38,11 +38,11 @@ namespace TeenTix.Common
 			return CheckTrueFalseResult (content, url);
 		}
 
-		public static async Task<Account> CreateAccount(SignUpAccount newAccount) {
+		public static async Task<CreateAccountResult> CreateAccount(SignUpAccount newAccount) {
 			Debug.WriteLine ("Creating new account: {0}", newAccount.ToString ());
 
 			if (!newAccount.AgreedToTOS) {
-				throw new DidNotAgreeToTOSException ("TOS must be agreed to before creating account!");
+				return CreateAccountResult.Failed("TOS must be agreed to before creating account!");
 			}
 
 			var qs = QueryString (
@@ -63,7 +63,7 @@ namespace TeenTix.Common
 
 			if (!response.Success) {
 				Debug.WriteLine ("Account creation failed with message: {0}", response.Message);
-				throw new AccountCreationFailureException (response.Message);
+				return CreateAccountResult.Failed (response.Message);
 			}
 
 			var account = new Account ();
@@ -77,7 +77,7 @@ namespace TeenTix.Common
 			account.AgreedToTOS = newAccount.AgreedToTOS;
 			account.Password = newAccount.Password;
 
-			return account;
+			return CreateAccountResult.Succeeded (account);
 		}
 
 		private static string QueryParam(string key, string value) {
@@ -124,4 +124,4 @@ namespace TeenTix.Common
 		}
 	}
 }
-
+	
