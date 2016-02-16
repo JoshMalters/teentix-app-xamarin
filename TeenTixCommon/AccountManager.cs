@@ -71,9 +71,6 @@ namespace TeenTix.Common
 			account.Email = newAccount.Email;
 			account.Username = newAccount.Email;
 			account.ScreenName = newAccount.ScreenName;
-			account.FirstName = newAccount.FirstName;
-			account.LastName = newAccount.LastName;
-			account.BirthDate = newAccount.BirthDate;
 			account.AgreedToTOS = newAccount.AgreedToTOS;
 			account.Password = newAccount.Password;
 
