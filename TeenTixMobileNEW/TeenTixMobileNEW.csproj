@@ -188,6 +188,18 @@
     <Compile Include="BrowserController.designer.cs">
       <DependentUpon>BrowserController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TermsButton.cs" />
+    <Compile Include="TermsButton.designer.cs">
+      <DependentUpon>TermsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowItWorksButton.cs" />
+    <Compile Include="HowItWorksButton.designer.cs">
+      <DependentUpon>HowItWorksButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorController_.cs" />
+    <Compile Include="SponsorController_.designer.cs">
+      <DependentUpon>SponsorController_.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />

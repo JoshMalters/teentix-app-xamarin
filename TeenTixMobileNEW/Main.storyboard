@@ -24,7 +24,7 @@
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="220" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="485" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="444" width="375" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2" green="0.6" blue="0.6" alpha="1"/>
                                 <state key="normal" title="LOGIN">
@@ -36,9 +36,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="539" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="505" width="375" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -84,10 +84,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="235" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="229" width="375" height="38"/>
+                                <rect key="frame" x="0.0" y="207" width="375" height="60"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2" green="0.6" blue="0.6" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Next!">
                                     <color key="titleShadowColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
@@ -152,8 +152,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="616" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="256" width="375" height="41"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <rect key="frame" x="0.0" y="256" width="375" height="59"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                                 <state key="normal" title="Next!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -261,7 +261,7 @@
                                 <rect key="frame" x="45" y="121" width="300" height="299"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="991" fixedFrame="YES" customClass="PassPageControl">
-                                <rect key="frame" x="168" y="467" width="38" height="36"/>
+                                <rect key="frame" x="195" y="473" width="38" height="36"/>
                             </pageControl>
                         </subviews>
                         <accessibility key="accessibilityConfiguration">
@@ -288,20 +288,21 @@
                     <view key="view" contentMode="scaleToFill" id="946">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I want to Sign Up for a Teen Tix Pass!" lineBreakMode="tailTruncation" minimumFontSize="10" id="993" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center" numberOfLines="2">
                                 <rect key="frame" x="44" y="70" width="286" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="994" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="SignUpPassButton">
-                                <rect key="frame" x="0.0" y="159" width="375" height="38"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <rect key="frame" x="0.0" y="159" width="375" height="60"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <state key="normal" title="Sign up for a Pass!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
                                     <segue id="1269" destination="1205" kind="show"/>
@@ -314,10 +315,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="996" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="ExistingAccountButton">
-                                <rect key="frame" x="0.0" y="358" width="375" height="39"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <rect key="frame" x="0.0" y="358" width="375" height="56"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <state key="normal" title="Sign Up for an Account!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
                                     <segue id="1200" destination="511" kind="show"/>
@@ -327,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="246" width="375" height="97"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -347,9 +349,10 @@
                     <view key="view" contentMode="scaleToFill" id="953" customClass="HomePageController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                     <connections/>
+                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="954" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +368,7 @@
                     <view key="view" contentMode="scaleToFill" id="960" customClass="GenresController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="961" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,7 +385,7 @@
                     <view key="view" contentMode="scaleToFill" id="967">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="968" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,7 +402,7 @@
                     <view key="view" contentMode="scaleToFill" id="981">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="982" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,7 +419,7 @@
                     <view key="view" contentMode="scaleToFill" id="988" customClass="CalendarDayController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="989" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,12 +436,40 @@
                     <view key="view" contentMode="scaleToFill" id="1007">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="30">
+                                <rect key="frame" x="20" y="147" width="335" height="334"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus metus purus, consectetur eget mi a, bibendum pretium lacus. Curabitur ac lacinia lacus.  Vivamus finibus sapien et euismod cursus. Mauris nec justo pellentesque, fringilla massa ut, posuere erat.  Donec id luctus diam. Aenean a consectetur ligula, a  viverra magna. Sed euismod risus nec nibh convallis,  efficitur rhoncus nisl congue. Phasellus id urna ornare,  posuere metus quis, cursus massa. Integer porta  dictum ornare. Nullam nec nibh massa. Phasellus  ultricies rhoncus erat ut vehicula. Ut non ultricies  dolor. Mauris eget tincidunt enim.  </string>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TERMS AND CONDITIONS" lineBreakMode="tailTruncation" minimumFontSize="10" id="1436" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="85" width="375" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1437" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="TermsButton">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
+                                <state key="normal" title="I Agree!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <segue id="1532" destination="1020" kind="show"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1008" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="11"/>
+            <point key="canvasLocation" x="2220" y="23"/>
         </scene>
         <scene sceneID="1019">
             <objects>
@@ -450,12 +481,29 @@
                     <view key="view" contentMode="scaleToFill" id="1021">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="HOW IT WORKS" lineBreakMode="tailTruncation" minimumFontSize="10" id="1438" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="89" width="375" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1439" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="HowItWorksButton">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
+                                <state key="normal" title="Continue!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1022" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736" y="13"/>
+            <point key="canvasLocation" x="2641" y="21"/>
         </scene>
         <scene sceneID="1204">
             <objects>
@@ -467,12 +515,29 @@
                     <view key="view" contentMode="scaleToFill" id="1206">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1207" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783" y="20"/>
+        </scene>
+        <scene sceneID="1543">
+            <objects>
+                <viewController id="1544" sceneMemberID="viewController" customClass="SponsorController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1541"/>
+                        <viewControllerLayoutGuide type="bottom" id="1542"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1545">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="820"/>
         </scene>
     </scenes>
     <resources>
