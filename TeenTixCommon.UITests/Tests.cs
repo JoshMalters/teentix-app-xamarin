@@ -5,7 +5,10 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
+using FluentAssertions;
+
 using TeenTix.Common;
+using TeenTix.Common.Exceptions;
 using TeenTix.Common.Model;
 
 namespace TeenTix.Common.UITests
@@ -32,34 +35,6 @@ namespace TeenTix.Common.UITests
 		public void AppLaunches ()
 		{
 			app.Screenshot ("First screen.");
-		}
-
-		[Test]
-		public async void IsEmailAvailable_ShouldBeAvailable() {
-			string email = "thomas@NOT-A-REAL-ADDRESS.com";
-			bool result = await AccountManager.IsEmailAvailable(email);
-			Assert.IsTrue (result);
-		}
-
-		[Test]
-		public async void IsEmailAvailable_NotAvailable() {
-			string email = "info@teentix.org";
-			bool result = await AccountManager.IsEmailAvailable (email);
-			Assert.IsFalse (result);
-		}
-
-		[Test]
-		public async void IsUsernameAvailable_ShouldBeAvailable() {
-			string username = "thomas" + Guid.NewGuid ().ToString ();
-			bool result = await AccountManager.IsUsernameAvailable (username);
-			Assert.IsTrue (result);
-		}
-
-		[Test]
-		public async void IsUsernameAvailable_NotAvailable() {
-			string username = "teentix";
-			bool result = await AccountManager.IsUsernameAvailable (username);
-			Assert.IsFalse (result);
 		}
 	}
 }

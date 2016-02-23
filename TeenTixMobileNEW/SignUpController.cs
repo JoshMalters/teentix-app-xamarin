@@ -43,18 +43,18 @@ namespace TeenTixMobileNEW
 			};
 			
 			// TODO: make async! (thomasvandoren, 2016-02-11)
-			SignUpNextButton.TouchUpInside +=  (object sender, EventArgs e) => {
+			SignUpNextButton.TouchUpInside += async (object sender, EventArgs e) => {
 
-
-				var account = new Account();
-				account.FirstName = SignUpFirstName.Text;
-				account.LastName = SignUpLastName.Text;
-				account.BirthDate = SignUpBirthdate.Text;
+				// FIXME: The following code is completely untested. It compiles, but that's it. (thomasvandoren, 2016-02-22)
+				var account = new SignUpAccount();
 				account.Email = SignUpEmail.Text;
-				account.Username = SignUpUsername.Text;
+				account.ScreenName = SignUpUsername.Text;
 				account.Password = SignUpPassword.Text;
 
-				AccountManager.CreateAccount(account);
+				// TODO: really have users set this somewhere! (thomasvandoren, 2016-02-15)
+				account.AgreedToTOS = true;
+
+				var result = await AccountManager.CreateAccount(account);
 
 			};
 
