@@ -110,6 +110,10 @@ namespace TeenTix.Common
 				return LoginResult.Failed (response.Message);
 			}
 
+			if (response.Data.Count < 1) {
+				return LoginResult.Failed ("Login response did not contain anything in data field.");
+			}
+
 			return LoginResult.Succeeded (response.Data [0].SessionId);
 		}
 
