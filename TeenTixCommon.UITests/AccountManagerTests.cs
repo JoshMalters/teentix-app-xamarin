@@ -37,28 +37,28 @@ namespace TeenTix.Common.UITests
 		public async void IsEmailAvailable_ShouldBeAvailable() {
 			string email = "thomas@NOT-A-REAL-ADDRESS.com";
 			bool result = await AccountManager.IsEmailAvailable(email);
-			Assert.IsTrue (result);
+			result.Should ().BeTrue ();
 		}
 
 		[Test]
 		public async void IsEmailAvailable_NotAvailable() {
 			string email = "info@teentix.org";
 			bool result = await AccountManager.IsEmailAvailable (email);
-			Assert.IsFalse (result);
+			result.Should ().BeFalse ();
 		}
 
 		[Test]
 		public async void IsUsernameAvailable_ShouldBeAvailable() {
 			string username = "thomas" + Guid.NewGuid ().ToString ();
 			bool result = await AccountManager.IsUsernameAvailable (username);
-			Assert.IsTrue (result);
+			result.Should ().BeTrue ();
 		}
 
 		[Test]
 		public async void IsUsernameAvailable_NotAvailable() {
 			string username = "teentix";
 			bool result = await AccountManager.IsUsernameAvailable (username);
-			Assert.IsFalse (result);
+			result.Should ().BeFalse ();
 		}
 
 		[Test]
