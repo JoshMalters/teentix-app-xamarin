@@ -44,7 +44,8 @@ namespace TeenTixMobileNEW
 			
 			// TODO: make async! (thomasvandoren, 2016-02-11)
 			SignUpNextButton.TouchUpInside += async (object sender, EventArgs e) => {
-				
+
+				// FIXME: The following code is completely untested. It compiles, but that's it. (thomasvandoren, 2016-02-22)
 				var account = new SignUpAccount();
 				account.Email = SignUpEmail.Text;
 				account.ScreenName = SignUpUsername.Text;
