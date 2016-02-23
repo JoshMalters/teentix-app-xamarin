@@ -68,12 +68,14 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchFloat32>true</MtouchFloat32>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: lauramvaliente@gmail.com (8A2VRJMQSP)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchUseSGen>true</MtouchUseSGen>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchProfiling>true</MtouchProfiling>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -110,10 +112,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="LandingController.cs" />
     <Compile Include="LandingController.designer.cs">
       <DependentUpon>LandingController.cs</DependentUpon>
@@ -138,9 +136,57 @@
     <Compile Include="NavButton.designer.cs">
       <DependentUpon>NavButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="passTabButton.cs" />
-    <Compile Include="passTabButton.designer.cs">
-      <DependentUpon>passTabButton.cs</DependentUpon>
+    <Compile Include="SignUpOptionsController.cs" />
+    <Compile Include="SignUpOptionsController.designer.cs">
+      <DependentUpon>SignUpOptionsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageController_.cs" />
+    <Compile Include="HomePageController_.designer.cs">
+      <DependentUpon>HomePageController_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenresController_.cs" />
+    <Compile Include="GenresController_.designer.cs">
+      <DependentUpon>GenresController_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarController.cs" />
+    <Compile Include="CalendarController.designer.cs">
+      <DependentUpon>CalendarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpLoadingController_.cs" />
+    <Compile Include="SignUpLoadingController_.designer.cs">
+      <DependentUpon>SignUpLoadingController_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarDayController.cs" />
+    <Compile Include="CalendarDayController.designer.cs">
+      <DependentUpon>CalendarDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventDetailsController__.cs" />
+    <Compile Include="EventDetailsController__.designer.cs">
+      <DependentUpon>EventDetailsController__.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassPageControl.cs" />
+    <Compile Include="PassPageControl.designer.cs">
+      <DependentUpon>PassPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPassButton.cs" />
+    <Compile Include="SignUpPassButton.designer.cs">
+      <DependentUpon>SignUpPassButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExistingAccountButton.cs" />
+    <Compile Include="ExistingAccountButton.designer.cs">
+      <DependentUpon>ExistingAccountButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TermsController.cs" />
+    <Compile Include="TermsController.designer.cs">
+      <DependentUpon>TermsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowItWorksController_.cs" />
+    <Compile Include="HowItWorksController_.designer.cs">
+      <DependentUpon>HowItWorksController_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrowserController.cs" />
+    <Compile Include="BrowserController.designer.cs">
+      <DependentUpon>BrowserController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
