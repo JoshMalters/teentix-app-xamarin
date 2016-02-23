@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
@@ -94,6 +95,46 @@ namespace TeenTix.Common.UITests
 			var createdAccount = await AccountManager.CreateAccount(signUpAccount);
 			createdAccount.Success.Should ().BeFalse ();
 			createdAccount.Account.Should ().BeNull ();
+		}
+
+		[Test]
+		public async void Login() {
+			var loginRequest = new LoginRequest ();
+			loginRequest.Username = "thomas.vandoren+tester123@gmail.com";
+			loginRequest.Password = "000000";
+			var result = await AccountManager.Login (loginRequest);
+
+			result.Success.Should ().BeTrue ();
+			result.Session.Should ().NotBeNullOrWhiteSpace ();
+		}
+
+		[Test]
+		public async void Login_BadEmail() {
+			var loginRequest = new LoginRequest ();
+			loginRequest.Username = "test-" + RandomInt () + "@fake-email-address-here.com";
+			loginRequest.Password = "000000";
+			var result = await AccountManager.Login (loginRequest);
+
+			result.Success.Should ().BeFalse ();
+			result.Session.Should ().BeNull ();
+		}
+
+		[Test]
+		public async void Login_BadPassword() {
+			var loginRequest = new LoginRequest ();
+			loginRequest.Username = "thomas.vandoren+tester123@gmail.com";
+			loginRequest.Password = Guid.NewGuid ().ToString ();
+			var result = await AccountManager.Login (loginRequest);
+
+			result.Success.Should ().BeFalse ();
+			result.Session.Should ().BeNull ();
+		}
+
+		private static async Task<Account> CreateAccount(string screenName) {
+			var a = GetAccount (screenName);
+			var result = await AccountManager.CreateAccount(a);
+			result.Success.Should ().BeTrue ();
+			return result.Account;
 		}
 
 		private static SignUpAccount GetAccount(string screenName) {

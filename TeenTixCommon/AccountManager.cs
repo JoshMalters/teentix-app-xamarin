@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 
 using TeenTix.Common.Exceptions;
 using TeenTix.Common.Model;
+using TeenTix.Common.Util;
 
 namespace TeenTix.Common
 {
@@ -45,6 +46,8 @@ namespace TeenTix.Common
 				return CreateAccountResult.Failed("TOS must be agreed to before creating account!");
 			}
 
+			// FIXME: validate fields of newAccount! (thomasvandoren, 2016-02-22)
+
 			var qs = QueryString (
 				QueryParam ("auth[api_key]", "28de9268-245b-4a75-8615-d4787c7d6b02"),
 				QueryParam ("data[username]", newAccount.Email),
@@ -57,8 +60,11 @@ namespace TeenTix.Common
 			var url = GetUrl ("/webservice/rest/create_member" + qs);
 
 			string responseBody = await GetRequest (url);
-
-			var response = JsonConvert.DeserializeObject<SignUpResponse> (responseBody);
+			var optionalResponse = ParseJson<SignUpResponse> (responseBody);
+			if (!optionalResponse.isPresent ()) {
+				return CreateAccountResult.Failed (string.Format("Failed to parse create account JSON response body: {0}", responseBody));
+			}
+			var response = optionalResponse.get ();
 			Debug.WriteLine ("Create account response: {0}", response);
 
 			if (!response.Success) {
@@ -77,9 +83,47 @@ namespace TeenTix.Common
 			return CreateAccountResult.Succeeded (account);
 		}
 
+		public static async Task<LoginResult> Login(LoginRequest loginRequest) {
+			Debug.WriteLine ("Logging in user: {0}", loginRequest);
+
+			// FIXME: check that both fields are set and valid. (thomasvandoren, 2016-02-22)
+
+			var qs = QueryString (
+				QueryParam("data[username]", loginRequest.Username),
+				QueryParam("data[password]", loginRequest.Password),
+				QueryParam("data[new_session]", "yes")
+			);
+
+			var url = GetUrl ("/webservice/rest/authenticate_username" + qs);
+
+			string responseBody = await GetRequest (url);
+
+			var optionalResponse = ParseJson<LoginResponse> (responseBody);
+			if (!optionalResponse.isPresent ()) {
+				return LoginResult.Failed (string.Format("Failed to parse Login JSON response body: {0}", responseBody));
+			}
+			var response = optionalResponse.get ();
+			Debug.WriteLine ("Login response: {0}", response);
+
+			if (!response.Success) {
+				Debug.WriteLine ("Login failed with message: {0}", response.Message);
+				return LoginResult.Failed (response.Message);
+			}
+
+			return LoginResult.Succeeded (response.Data [0].SessionId);
+		}
+
+		private static Optional<T> ParseJson<T>(string responseBody) {
+			try {
+				return Optional<T>.of(JsonConvert.DeserializeObject<T> (responseBody));
+			} catch (JsonReaderException e) {
+				Debug.WriteLine ("Failed to parse JSON response body as LoginResponse: {0}", responseBody);
+				return Optional<T>.empty ();
+			}
+		}
+
 		private static string QueryParam(string key, string value) {
-			// TODO: urlencode keys and values! (thomasvandoren, 2016-02-13)
-			return string.Format ("{0}={1}", key, value);
+			return string.Format ("{0}={1}", WebUtility.UrlEncode(key), WebUtility.UrlEncode(value));
 		}
 
 		private static string QueryString(params string[] paramList) {
