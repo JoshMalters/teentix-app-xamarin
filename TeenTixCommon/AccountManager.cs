@@ -119,9 +119,9 @@ namespace TeenTix.Common
 
 		private static Optional<T> ParseJson<T>(string responseBody) {
 			try {
-				return Optional<T>.of(JsonConvert.DeserializeObject<T> (responseBody));
+				return Optional<T>.ofNullable(JsonConvert.DeserializeObject<T> (responseBody));
 			} catch (JsonReaderException e) {
-				Debug.WriteLine ("Failed to parse JSON response body as LoginResponse: {0}", responseBody);
+				Debug.WriteLine ("Failed to parse JSON response body as LoginResponse error: {0} body: {1}", e.Message, responseBody);
 				return Optional<T>.empty ();
 			}
 		}
