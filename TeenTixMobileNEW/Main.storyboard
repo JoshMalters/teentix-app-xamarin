@@ -542,10 +542,14 @@
     </scenes>
     <resources>
         <image name="teentixlogo.tif" width="386" height="394"/>
+        <image name="Images.xcassets/pass.png" width="386" height="394"/>
+        <image name="Images.xcassets/pass.tif" width="386" height="394"/>
+        <image name="Images.xcassets/teentixITUNES.jpg" width="386" height="394"/>
+        <image name="Images.xcassets/teentixlogo.jpg" width="512" height="512"/>
     </resources>
     <color key="tintColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina47"/>
+        <simulatedScreenMetrics key="destination" type="retina55"/>
         <simulatedOrientationMetrics key="orientation"/>
     </simulatedMetricsContainer>
 </document>
