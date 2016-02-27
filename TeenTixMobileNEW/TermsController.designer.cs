@@ -14,8 +14,16 @@ namespace TeenTixMobileNEW
 	[Register ("TermsController")]
 	partial class TermsController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		TermsButton TermsButton { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (TermsButton != null) {
+				TermsButton.Dispose ();
+				TermsButton = null;
+			}
 		}
 	}
 }
