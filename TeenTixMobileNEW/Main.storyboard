@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="HomeController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -62,7 +62,7 @@
                         <viewControllerLayoutGuide type="bottom" id="226"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="229">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -140,7 +140,7 @@
                         <viewControllerLayoutGuide type="bottom" id="509"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="512">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -246,7 +246,7 @@
                         <viewControllerLayoutGuide type="bottom" id="610"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="613">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -261,12 +261,50 @@
                                 <rect key="frame" x="45" y="121" width="300" height="299"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="991" fixedFrame="YES" customClass="PassPageControl">
-                                <rect key="frame" x="195" y="473" width="38" height="36"/>
+                                <rect key="frame" x="168" y="467" width="38" height="36"/>
                             </pageControl>
+                            <tabBar contentMode="scaleToFill" id="1619" translatesAutoresizingMaskIntoConstraints="NO" customClass="PassNavBar">
+                                <rect key="frame" x="20" y="612" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1620"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1622" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1624" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1623" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1621"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1622"/>
+                                        <include reference="1623"/>
+                                        <include reference="1624"/>
+                                    </mask>
+                                </variation>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1622"/>
+                                        <exclude reference="1623"/>
+                                        <exclude reference="1624"/>
+                                    </mask>
+                                </variation>
+                                <color key="selectedImageTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                            </tabBar>
                         </subviews>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                         </accessibility>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1619"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1619"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem title="LANDING" id="730" translatesAutoresizingMaskIntoConstraints="NO" key="navigationItem" customClass="NavButton">
                         <accessibility key="accessibilityConfiguration">
@@ -276,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="614" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="816"/>
+            <point key="canvasLocation" x="2524" y="777"/>
         </scene>
         <scene sceneID="944">
             <objects>
@@ -286,7 +324,7 @@
                         <viewControllerLayoutGuide type="bottom" id="943"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="946">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -347,9 +385,23 @@
                         <viewControllerLayoutGuide type="bottom" id="950"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="953" customClass="HomePageController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="1565" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="HomeNavBar">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1566"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1568" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1570" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1569" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1567"/>
+                                </items>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                            </tabBar>
+                        </subviews>
                     </view>
                     <connections/>
                     <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
@@ -366,9 +418,23 @@
                         <viewControllerLayoutGuide type="bottom" id="957"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="960" customClass="GenresController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="1577" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="GenresNavBar">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1578"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1580" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1582" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1581" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1579"/>
+                                </items>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                            </tabBar>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="961" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,9 +449,48 @@
                         <viewControllerLayoutGuide type="bottom" id="964"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="967">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="1599" translatesAutoresizingMaskIntoConstraints="NO" customClass="CalendarNavBar">
+                                <rect key="frame" x="20" y="598" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1600"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1604" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1606" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1605" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1601"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1604"/>
+                                        <include reference="1605"/>
+                                        <include reference="1606"/>
+                                    </mask>
+                                </variation>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1604"/>
+                                        <exclude reference="1605"/>
+                                        <exclude reference="1606"/>
+                                    </mask>
+                                </variation>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                            </tabBar>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1599"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1599"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="968" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,9 +505,48 @@
                         <viewControllerLayoutGuide type="bottom" id="978"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="981">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="1607" translatesAutoresizingMaskIntoConstraints="NO" customClass="EventDayNavBar">
+                                <rect key="frame" x="28" y="598" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1608"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1610" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1612" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1611" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1609"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1610"/>
+                                        <include reference="1611"/>
+                                        <include reference="1612"/>
+                                    </mask>
+                                </variation>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1610"/>
+                                        <exclude reference="1611"/>
+                                        <exclude reference="1612"/>
+                                    </mask>
+                                </variation>
+                            </tabBar>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1607"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1607"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="982" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,9 +561,48 @@
                         <viewControllerLayoutGuide type="bottom" id="985"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="988" customClass="CalendarDayController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="1613" translatesAutoresizingMaskIntoConstraints="NO" customClass="CalendarDayNavBar">
+                                <rect key="frame" x="28" y="606" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1614"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1618" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1616" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1617" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1615"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1616"/>
+                                        <include reference="1617"/>
+                                        <include reference="1618"/>
+                                    </mask>
+                                </variation>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1616"/>
+                                        <exclude reference="1617"/>
+                                        <exclude reference="1618"/>
+                                    </mask>
+                                </variation>
+                            </tabBar>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1613"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1613"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="989" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -434,7 +617,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1004"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1007">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -479,7 +662,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1018"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1021">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
@@ -490,20 +673,49 @@
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1439" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="HowItWorksButton">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
-                                <state key="normal" title="Continue!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                </state>
-                            </button>
+                            <tabBar contentMode="scaleToFill" id="1625" translatesAutoresizingMaskIntoConstraints="NO" customClass="HowWorksNavBar">
+                                <rect key="frame" x="10" y="618" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1626"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1628" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1630" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1629" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1627"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1628"/>
+                                        <include reference="1629"/>
+                                        <include reference="1630"/>
+                                    </mask>
+                                </variation>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1628"/>
+                                        <exclude reference="1629"/>
+                                        <exclude reference="1630"/>
+                                    </mask>
+                                </variation>
+                            </tabBar>
                         </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1625"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1625"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1022" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="21"/>
+            <point key="canvasLocation" x="2816" y="15"/>
         </scene>
         <scene sceneID="1204">
             <objects>
@@ -513,9 +725,16 @@
                         <viewControllerLayoutGuide type="bottom" id="1203"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1206">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="1564" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" scalesPageToFit="YES">
+                                <rect key="frame" x="18" y="34" width="342" height="620"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" phoneNumber="YES"/>
+                            </webView>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1207" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,14 +749,60 @@
                         <viewControllerLayoutGuide type="bottom" id="1542"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1545">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1563" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center" text="PARTNERS">
+                                <rect key="frame" x="0.0" y="54" width="375" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" id="1631" translatesAutoresizingMaskIntoConstraints="NO" customClass="PartnersNavBar">
+                                <rect key="frame" x="0.0" y="614" width="320" height="49"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1632"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1634" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1636" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem key="tabBarItem" title="Item" id="1635" translatesAutoresizingMaskIntoConstraints="NO"/>
+                                    <tabBarItem systemItem="more" id="1633"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                    <mask key="subviews">
+                                        <include reference="1634"/>
+                                        <include reference="1635"/>
+                                        <include reference="1636"/>
+                                    </mask>
+                                </variation>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1634"/>
+                                        <exclude reference="1635"/>
+                                        <exclude reference="1636"/>
+                                    </mask>
+                                </variation>
+                            </tabBar>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1631"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1631"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="820"/>
+            <point key="canvasLocation" x="2954" y="779"/>
         </scene>
     </scenes>
     <resources>
@@ -549,7 +814,7 @@
     </resources>
     <color key="tintColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina55"/>
+        <simulatedScreenMetrics key="destination" type="retina47"/>
         <simulatedOrientationMetrics key="orientation"/>
     </simulatedMetricsContainer>
 </document>
