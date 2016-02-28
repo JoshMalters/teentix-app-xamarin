@@ -44,7 +44,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="602" destination="511" kind="showDetail"/>
+                                    <segue id="2380" destination="945" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="230" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="-216"/>
+            <point key="canvasLocation" x="106" y="727"/>
         </scene>
         <scene sceneID="510">
             <objects>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="513" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="-253"/>
+            <point key="canvasLocation" x="1066" y="-9"/>
         </scene>
         <scene sceneID="611">
             <objects>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="614" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="351"/>
+            <point key="canvasLocation" x="1684" y="1614"/>
         </scene>
         <scene sceneID="944">
             <objects>
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="947" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="-315"/>
+            <point key="canvasLocation" x="186" y="-225"/>
         </scene>
         <scene sceneID="958">
             <objects>
@@ -343,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="961" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="665"/>
+            <point key="canvasLocation" x="-136" y="1611"/>
         </scene>
         <scene sceneID="965">
             <objects>
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="968" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="701"/>
+            <point key="canvasLocation" x="296" y="1626"/>
         </scene>
         <scene sceneID="979">
             <objects>
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="982" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="698"/>
+            <point key="canvasLocation" x="716" y="1623"/>
         </scene>
         <scene sceneID="986">
             <objects>
@@ -397,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="989" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="663"/>
+            <point key="canvasLocation" x="1144" y="1618"/>
         </scene>
         <scene sceneID="1005">
             <objects>
@@ -433,19 +433,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
-                                <connections>
-                                    <segue id="1532" destination="1020" kind="show" identifier="SegueToHowItWorks"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="TermsButton" destination="1437" id="name-outlet-1437"/>
+                        <segue id="2436" destination="2385" kind="show" identifier="SegueToVerifyEmail"/>
+                        <segue id="2538" destination="511" kind="show" identifier="SegueToSignUpOnError"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1008" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-613"/>
+            <point key="canvasLocation" x="1610" y="-13"/>
         </scene>
         <scene sceneID="1019">
             <objects>
@@ -471,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1022" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="-450"/>
+            <point key="canvasLocation" x="2648" y="-12"/>
         </scene>
         <scene sceneID="1204">
             <objects>
@@ -495,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1207" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-249"/>
+            <point key="canvasLocation" x="1069" y="-814"/>
         </scene>
         <scene sceneID="1543">
             <objects>
@@ -521,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917" y="361"/>
+            <point key="canvasLocation" x="2145" y="1610"/>
         </scene>
         <scene sceneID="2215">
             <objects>
@@ -556,7 +556,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2218" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253" y="666"/>
+            <point key="canvasLocation" x="696" y="732"/>
+        </scene>
+        <scene sceneID="2384">
+            <objects>
+                <viewController id="2385" sceneMemberID="viewController" customClass="VerifyEmailController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2382"/>
+                        <viewControllerLayoutGuide type="bottom" id="2383"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2386">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2389" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="369" width="375" height="60"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
+                                <state key="normal" title="Login!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections/>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2392" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="5">
+                                <rect key="frame" x="20" y="232" width="335" height="112"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <string key="text">Congratulation! Your TeenTix account has been created. You should receive an email asking your to verify your account. Once you visit the link in that email, tap Login! below to get started using the TeenTix.</string>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VERIFY EMAIL" lineBreakMode="tailTruncation" minimumFontSize="10" id="2393" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="83" width="375" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2483" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="478" width="335" height="33"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="2389" id="name-outlet-2389"/>
+                        <segue id="2480" destination="1020" kind="show" identifier="SegueToHowItWorks"/>
+                        <outlet property="VerifyMessage" destination="2483" id="name-outlet-2483"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2387" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="-13"/>
         </scene>
     </scenes>
     <resources>

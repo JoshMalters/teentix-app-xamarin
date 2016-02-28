@@ -10,8 +10,6 @@ namespace TeenTixMobileNEW
 {
 	partial class LoginController : UIViewController
 	{
-		private bool done = false;
-
 		public LoginController (IntPtr handle) : base (handle)
 		{
 		}
@@ -33,9 +31,7 @@ namespace TeenTixMobileNEW
 
 				if (result.Success) {
 					RestAPI.Session = result.Session;
-//					this.PerformSegue("SegueToHome", this);
 					PerformSegue("SegueToPostLoginManual", this);
-					done = true;
 				} else {
 					EnableFormAndShowError(result.ErrorMessage);
 				}
@@ -47,7 +43,7 @@ namespace TeenTixMobileNEW
 		}
 
 		private void EnableFormAndShowError(string errorMessage) {
-			// TODO: implement for enable! (thomasvandoren, 2016-02-27)
+			// TODO: implement form enable! (thomasvandoren, 2016-02-27)
 			LoginMessage.Text = errorMessage;
 		}
 

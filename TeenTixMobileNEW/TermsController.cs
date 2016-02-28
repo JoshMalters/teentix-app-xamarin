@@ -29,11 +29,32 @@ namespace TeenTixMobileNEW
 				var result = await AccountManager.CreateAccount(NewAccount);
 
 				if (result.Success) {
-					ContinueToHowItWorks();
+					PerformSegue("SegueToVerifyEmail", this);
 				} else {
 					EnableSignUpFormAndShowError(result.ErrorMessage);
 				}
 			};
+		}
+
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
+
+			if ("SegueToVerifyEmail".Equals (segue.Identifier)) {
+				var verifyEmailController = segue.DestinationViewController as VerifyEmailController;
+				if (verifyEmailController != null) {
+					verifyEmailController.LoginInfo = GetLoginInfo ();
+				}
+			} else if ("SegueToSignUpOnError".Equals(segue.Identifier)) {
+				// TODO: implement this!
+			}
+		}
+
+		private LoginRequest GetLoginInfo() {
+			var info = new LoginRequest ();
+			info.Email = NewAccount.Email;
+			info.Password = NewAccount.Password;
+			return info;
 		}
 
 		private void DisableFormAndShowSpinner() {
@@ -41,11 +62,7 @@ namespace TeenTixMobileNEW
 		}
 
 		private void EnableSignUpFormAndShowError(string errorMessage) {
-			// TODO: implement me!
-		}
-
-		private void ContinueToHowItWorks() {
-			// TODO: implement me!
+			// TODO: implement form! (maybe use SegueToSignUpOnError segue)
 		}
 	}
 
