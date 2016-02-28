@@ -26,9 +26,22 @@ namespace TeenTixMobileNEW
 
 
 				// TODO: disable form and show spinner, while account create happens...
-
 				var result = await AccountManager.CreateAccount(NewAccount);
+
+				if (result.Success) {
+					ContinueToHowItWorks();
+				} else {
+					EnableSignUpFormAndShowError(result.ErrorMessage);
+				}
 			};
+		}
+
+		private void DisableFormAndShowSpinner() {
+			// TODO: implement me!
+		}
+
+		private void EnableSignUpFormAndShowError(string errorMessage) {
+			// TODO: implement me!
 		}
 	}
 

@@ -51,7 +51,11 @@ namespace TeenTixMobileNEW
 				newAccount.Password = SignUpPassword.Text;
 
 				var validResult = await AccountManager.ValidateAccount(newAccount);
-				if (validResult.Valid) {
+				if (!validResult.Valid) {
+					// TODO: Consider using one generic message box for all messages... (thomasvandoren, 2016-02-27)
+					EmailMessage.Text = validResult.Message;
+					UsernameMessage.Text = "";
+				} else {
 					// go to TermsController, and pass account along.
 
 					var termsController = this.Storyboard.InstantiateViewController("TermsController") as TermsController;
@@ -62,9 +66,6 @@ namespace TeenTixMobileNEW
 					} else {
 						Console.WriteLine("TEENTIX: Failed to instantiate TermsController!");
 					}
-				} else {
-					// TODO: Consider using one generic message box for all messages... (thomasvandoren, 2016-02-27)
-					EmailMessage.Text = validResult.Message;
 				}
 			};
 		}
