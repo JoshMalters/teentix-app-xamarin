@@ -3,6 +3,8 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
+using TeenTix.Common;
+
 namespace TeenTixMobileNEW
 {
 	partial class HomePageController : UIViewController
@@ -15,7 +17,7 @@ namespace TeenTixMobileNEW
 		{
 			base.ViewDidLoad ();
 
-
+			SessionText.Text = RestAPI.Session;
 		}
 	}
 }

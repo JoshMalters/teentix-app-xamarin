@@ -363,7 +363,9 @@
                             </label>
                         </subviews>
                     </view>
-                    <connections/>
+                    <connections>
+                        <outlet property="SessionText" destination="1598" id="name-outlet-1598"/>
+                    </connections>
                     <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="954" userLabel="First Responder" sceneMemberID="firstResponder"/>

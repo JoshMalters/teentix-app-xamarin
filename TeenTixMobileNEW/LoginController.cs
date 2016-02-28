@@ -43,7 +43,7 @@ namespace TeenTixMobileNEW
 		}
 
 		private void ContinueToHome() {
-			PerformSegue("SegueToHome", this);
+			// TODO: implement me!
 		}
 
 		private LoginRequest LoginFromForm() {
