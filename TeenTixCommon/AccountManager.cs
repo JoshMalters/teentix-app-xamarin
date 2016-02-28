@@ -45,7 +45,7 @@ namespace TeenTix.Common
 		public static async Task<AccountValidationResult> ValidateAccount(SignUpAccount newAccount) {
 			// Discount account validate in here. Will need to make it more robust in future.
 
-			List<String> invalidThings = new LinkedList<string> ();
+			List<String> invalidThings = new List<string> ();
 
 			var usernameAvailable = await IsUsernameAvailable (newAccount.ScreenName);
 			if (!usernameAvailable) {
@@ -57,7 +57,7 @@ namespace TeenTix.Common
 				invalidThings.Add ("email " + newAccount.Email + " is not available");
 			}
 
-			if (string.IsNullOrWhiteSpace (newAccount.Password) || newAccount.Password.Length >= MINIMUM_PASSWORD_LENGTH) {
+			if (string.IsNullOrWhiteSpace (newAccount.Password) || newAccount.Password.Length < MINIMUM_PASSWORD_LENGTH) {
 				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
 			}
 
