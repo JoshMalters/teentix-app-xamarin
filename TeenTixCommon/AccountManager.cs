@@ -42,22 +42,24 @@ namespace TeenTix.Common
 			return CheckTrueFalseResult (content, url);
 		}
 
-		public static async Task<AccountValidationResult> ValidateAccount(SignUpAccount newAccount) {
+		private static bool StringIsValid(string s) {
+			return !string.IsNullOrWhiteSpace (s);
+		}
+
+		public static AccountValidationResult ValidateAccount(SignUpAccount newAccount) {
 			// Discount account validate in here. Will need to make it more robust in future.
 
 			List<String> invalidThings = new List<string> ();
 
-			var usernameAvailable = await IsUsernameAvailable (newAccount.ScreenName);
-			if (!usernameAvailable) {
+			if (!StringIsValid(newAccount.ScreenName)) {
 				invalidThings.Add ("username " + newAccount.ScreenName + " is not available");
 			}
 
-			var emailAvailable = await IsEmailAvailable (newAccount.Email);
-			if (!emailAvailable) {
+			if (!StringIsValid(newAccount.Email)) {
 				invalidThings.Add ("email " + newAccount.Email + " is not available");
 			}
 
-			if (string.IsNullOrWhiteSpace (newAccount.Password) || newAccount.Password.Length < MINIMUM_PASSWORD_LENGTH) {
+			if (!StringIsValid(newAccount.Password) || newAccount.Password.Length < MINIMUM_PASSWORD_LENGTH) {
 				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
 			}
 
