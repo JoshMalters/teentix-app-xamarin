@@ -62,16 +62,6 @@ namespace TeenTix.Common.UITests
 		}
 
 		[Test]
-		public async void ValidateAccount_Valid() {
-			Assert.Fail ("implement me!");
-		}
-
-		[Test]
-		public async void ValidateAccount_InvalidStuff() {
-			Assert.Fail ("implement me!");
-		}
-
-		[Test]
 		public async void CreateAccount() {
 			var signUpAccount = GetAccount ("test-" + RandomInt());
 			var createdAccount = await AccountManager.CreateAccount (signUpAccount);
