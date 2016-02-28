@@ -25,6 +25,7 @@ namespace TeenTixMobileNEW
 				var result = await AccountManager.Login (LoginFromForm());
 
 				if (result.Success) {
+					RestAPI.Session = result.Session;
 					ContinueToHome();
 				} else {
 					EnableFormAndShowError(result.ErrorMessage);
@@ -37,11 +38,12 @@ namespace TeenTixMobileNEW
 		}
 
 		private void EnableFormAndShowError(string errorMessage) {
-			// TODO: implement me!
+			// TODO: implement for enable! (thomasvandoren, 2016-02-27)
+			LoginMessage.Text = errorMessage;
 		}
 
 		private void ContinueToHome() {
-			// TODO: implement me!
+			PerformSegue("SegueToHome", this);
 		}
 
 		private LoginRequest LoginFromForm() {
