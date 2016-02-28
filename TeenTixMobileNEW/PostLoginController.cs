@@ -7,9 +7,9 @@ using TeenTix.Common;
 
 namespace TeenTixMobileNEW
 {
-	partial class HomePageController : UIViewController
+	partial class PostLoginController : UIViewController
 	{
-		public HomePageController (IntPtr handle) : base (handle)
+		public PostLoginController (IntPtr handle) : base (handle)
 		{
 		}
 
@@ -17,7 +17,7 @@ namespace TeenTixMobileNEW
 		{
 			base.ViewDidLoad ();
 
-			SessionText.Text = RestAPI.Session;
+			LoginSession.Text = RestAPI.Session;
 		}
 	}
 }

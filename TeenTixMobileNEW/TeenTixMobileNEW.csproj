@@ -154,9 +154,6 @@
     <Compile Include="SignUpOptionsController.designer.cs">
       <DependentUpon>SignUpOptionsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePageController_.designer.cs">
-      <DependentUpon>HomePageController.cs</DependentUpon>
-    </Compile>
     <Compile Include="GenresController_.cs" />
     <Compile Include="GenresController_.designer.cs">
       <DependentUpon>GenresController_.cs</DependentUpon>
@@ -245,7 +242,10 @@
     <Compile Include="PartnersNavBar.designer.cs">
       <DependentUpon>PartnersNavBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePageController.cs" />
+    <Compile Include="PostLoginController.cs" />
+    <Compile Include="PostLoginController.designer.cs">
+      <DependentUpon>PostLoginController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />

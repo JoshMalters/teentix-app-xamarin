@@ -91,9 +91,7 @@
                                     <color key="titleShadowColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
-                                <connections>
-                                    <segue id="1810" destination="952" kind="show" identifier="SegueToHome"/>
-                                </connections>
+                                <connections/>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email" lineBreakMode="tailTruncation" minimumFontSize="10" id="720" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="20" y="113" width="86" height="21"/>
@@ -123,6 +121,7 @@
                         <outlet property="LoginButton" destination="235" id="name-outlet-235"/>
                         <outlet property="LoginEmail" destination="233" id="name-outlet-233"/>
                         <outlet property="LoginPassword" destination="234" id="name-outlet-234"/>
+                        <segue id="2332" destination="2216" kind="show" identifier="SegueToPostLoginManual"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="230" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,50 +327,6 @@
             </objects>
             <point key="canvasLocation" x="375" y="-315"/>
         </scene>
-        <scene sceneID="951">
-            <objects>
-                <viewController id="952" sceneMemberID="viewController" customClass="HomePageController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="949"/>
-                        <viewControllerLayoutGuide type="bottom" id="950"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="953" customClass="HomePageController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1598" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
-                                <rect key="frame" x="20" y="101" width="335" height="161"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" name="Helvetica" family="Helvetica" size="14"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Login Session" lineBreakMode="tailTruncation" minimumFontSize="10" id="1599" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
-                                <rect key="frame" x="20" y="56" width="335" height="21"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="SessionText" destination="1598" id="name-outlet-1598"/>
-                    </connections>
-                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="954" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-177" y="648"/>
-        </scene>
         <scene sceneID="958">
             <objects>
                 <viewController id="959" sceneMemberID="viewController" customClass="GenresController">
@@ -567,6 +522,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2917" y="361"/>
+        </scene>
+        <scene sceneID="2215">
+            <objects>
+                <viewController id="2216" sceneMemberID="viewController" customClass="PostLoginController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2213"/>
+                        <viewControllerLayoutGuide type="bottom" id="2214"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2217">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Login Session" lineBreakMode="tailTruncation" minimumFontSize="10" id="2220" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="80" y="80" width="164" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="71" y="161" width="160" height="240"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="LoginSession" destination="2221" id="name-outlet-2221"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2218" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-253" y="666"/>
         </scene>
     </scenes>
     <resources>

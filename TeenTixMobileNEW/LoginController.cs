@@ -10,6 +10,8 @@ namespace TeenTixMobileNEW
 {
 	partial class LoginController : UIViewController
 	{
+		private bool done = false;
+
 		public LoginController (IntPtr handle) : base (handle)
 		{
 		}
@@ -19,6 +21,11 @@ namespace TeenTixMobileNEW
 			base.ViewDidLoad ();
 
 			LoginButton.TouchUpInside += async (object sender, EventArgs e) => {
+				var valid = AccountManager.ValidateLogin(LoginFromForm());
+				if (!valid.Valid) {
+					LoginMessage.Text = valid.Message;
+					return;
+				}
 
 				DisableFormAndShowSpinner();
 
@@ -26,7 +33,9 @@ namespace TeenTixMobileNEW
 
 				if (result.Success) {
 					RestAPI.Session = result.Session;
-					ContinueToHome();
+//					this.PerformSegue("SegueToHome", this);
+					PerformSegue("SegueToPostLoginManual", this);
+					done = true;
 				} else {
 					EnableFormAndShowError(result.ErrorMessage);
 				}
@@ -40,10 +49,6 @@ namespace TeenTixMobileNEW
 		private void EnableFormAndShowError(string errorMessage) {
 			// TODO: implement for enable! (thomasvandoren, 2016-02-27)
 			LoginMessage.Text = errorMessage;
-		}
-
-		private void ContinueToHome() {
-			// TODO: implement me!
 		}
 
 		private LoginRequest LoginFromForm() {

@@ -11,18 +11,18 @@ using UIKit;
 
 namespace TeenTixMobileNEW
 {
-	[Register ("HomePageController")]
-	partial class HomePageController
+	[Register ("PostLoginController")]
+	partial class PostLoginController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView SessionText { get; set; }
+		UITextView LoginSession { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (SessionText != null) {
-				SessionText.Dispose ();
-				SessionText = null;
+			if (LoginSession != null) {
+				LoginSession.Dispose ();
+				LoginSession = null;
 			}
 		}
 	}
