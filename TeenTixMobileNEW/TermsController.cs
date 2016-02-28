@@ -43,6 +43,10 @@ namespace TeenTixMobileNEW
 		private void EnableSignUpFormAndShowError(string errorMessage) {
 			// TODO: implement me!
 		}
+
+		private void ContinueToHowItWorks() {
+			// TODO: implement me!
+		}
 	}
 
 }
