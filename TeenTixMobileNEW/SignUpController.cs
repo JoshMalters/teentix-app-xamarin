@@ -10,11 +10,8 @@ namespace TeenTixMobileNEW
 {
 	partial class SignUpController : UIViewController
 	{
-
 		public SignUpController (IntPtr handle) : base (handle)
 		{
-
-
 		}
 
 		public override void ViewDidLoad ()
@@ -27,9 +24,9 @@ namespace TeenTixMobileNEW
 
 				Console.WriteLine(email + results);
 				if (results) {
-					EmailMessage.Text = "Your Email is Valid";
+					SignUpMessage.Text = "Your Email is Valid";
 				} else {
-					EmailMessage.Text = "Your Email is not Valid";
+					SignUpMessage.Text = "Your Email is not Valid";
 				}
 			};
 
@@ -37,63 +34,44 @@ namespace TeenTixMobileNEW
 				string username = SignUpUsername.Text;
 				bool results = await AccountManager.IsUsernameAvailable(username);
 				if (results) {
-					UsernameMessage.Text = "Your Username is Valid";
+					SignUpMessage.Text = "Your Username is Valid";
 				} else {
-					UsernameMessage.Text = "Your Username is not Valid";
-				}
-			};
-
-			SignUpNextButton.TouchUpInside += async (object sender, EventArgs e) => {
-
-				var newAccount = new SignUpAccount();
-				newAccount.Email = SignUpEmail.Text;
-				newAccount.ScreenName = SignUpUsername.Text;
-				newAccount.Password = SignUpPassword.Text;
-
-				var validResult = await AccountManager.ValidateAccount(newAccount);
-				if (!validResult.Valid) {
-					// TODO: Consider using one generic message box for all messages... (thomasvandoren, 2016-02-27)
-					EmailMessage.Text = validResult.Message;
-					UsernameMessage.Text = "";
-				} else {
-					// go to TermsController, and pass account along.
-
-					var termsController = this.Storyboard.InstantiateViewController("TermsController") as TermsController;
-
-					if (termsController != null) {
-						termsController.NewAccount = newAccount;
-						this.NavigationController.PushViewController(termsController, true);
-					} else {
-						Console.WriteLine("TEENTIX: Failed to instantiate TermsController!");
-					}
+					SignUpMessage.Text = "Your Username is not Valid";
 				}
 			};
 		}
 
 		public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
 		{
-
-
+			if ("SegueToTerms".Equals (segueIdentifier)) {
+				var accountIsValid = AccountManager.ValidateAccount (AccountFromForm());
+				if (!accountIsValid.Valid) {
+					SignUpMessage.Text = accountIsValid.Message;
+				}
+				return accountIsValid.Valid;
+			}
 			return base.ShouldPerformSegue (segueIdentifier, sender);
 		}
 
-//
-//		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
-//		{
-//			base.PrepareForSegue (segue, sender);
-//
-//			Console.WriteLine ("TEENTIX: Inside PrepareForSeque");
-//			var termsController = segue.DestinationViewController as TermsController;
-//
-//			Console.WriteLine ("termsController = {0}", termsController);
-//			if (termsController != null) {
-//				termsController.NewAccount = new SignUpAccount();
-//				termsController.NewAccount.Email = SignUpEmail.Text;
-//				termsController.NewAccount.ScreenName = SignUpUsername.Text;
-//				termsController.NewAccount.Password = SignUpPassword.Text;;
-//			} else {
-//				throw new Exception ("could not load TremsController!");
-//			}
-//		}
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
+
+			var termsController = segue.DestinationViewController as TermsController;
+
+			if (termsController != null) {
+				termsController.NewAccount = AccountFromForm ();
+			} else {
+				throw new Exception ("could not load TremsController!");
+			}
+		}
+
+		private SignUpAccount AccountFromForm() {
+			var result = new SignUpAccount ();
+			result.Email = SignUpEmail.Text;
+			result.ScreenName = SignUpUsername.Text;
+			result.Password = SignUpPassword.Text;
+			return result;
+		}
 	}
 }

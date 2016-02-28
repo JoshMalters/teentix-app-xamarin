@@ -24,7 +24,6 @@ namespace TeenTixMobileNEW
 
 				NewAccount.AgreedToTOS = true;
 
-
 				// TODO: disable form and show spinner, while account create happens...
 				var result = await AccountManager.CreateAccount(NewAccount);
 

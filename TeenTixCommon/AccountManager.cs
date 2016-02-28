@@ -52,11 +52,11 @@ namespace TeenTix.Common
 			List<String> invalidThings = new List<string> ();
 
 			if (!StringIsValid(newAccount.ScreenName)) {
-				invalidThings.Add ("username " + newAccount.ScreenName + " is not available");
+				invalidThings.Add ("enter valid username");
 			}
 
 			if (!StringIsValid(newAccount.Email)) {
-				invalidThings.Add ("email " + newAccount.Email + " is not available");
+				invalidThings.Add ("enter valid email");
 			}
 
 			if (!StringIsValid(newAccount.Password) || newAccount.Password.Length < MINIMUM_PASSWORD_LENGTH) {

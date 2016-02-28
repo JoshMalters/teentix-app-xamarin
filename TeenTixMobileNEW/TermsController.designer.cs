@@ -16,7 +16,7 @@ namespace TeenTixMobileNEW
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		TermsButton TermsButton { get; set; }
+		UIButton TermsButton { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{

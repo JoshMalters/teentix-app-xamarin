@@ -160,7 +160,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="1371" destination="1006" kind="show"/>
+                                    <segue id="1371" destination="1006" kind="show" identifier="SegueToTerms"/>
                                 </connections>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute keyPath="accessibilityIdentifier" type="string" value="SignUpNextButton"/>
@@ -203,14 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="911" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="119" y="323" width="149" height="33"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="912" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="119" y="364" width="149" height="33"/>
+                                <rect key="frame" x="20" y="323" width="335" height="33"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -230,8 +223,7 @@
                         <outlet property="SignUpEmail" destination="713" id="name-outlet-713"/>
                         <outlet property="SignUpUsername" destination="711" id="name-outlet-711"/>
                         <outlet property="SignUpPassword" destination="714" id="name-outlet-714"/>
-                        <outlet property="EmailMessage" destination="911" id="name-outlet-911"/>
-                        <outlet property="UsernameMessage" destination="912" id="name-outlet-912"/>
+                        <outlet property="SignUpMessage" destination="911" id="name-outlet-911"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="513" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,7 +450,7 @@
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1437" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="TermsButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1437" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <state key="normal" title="I Agree!">
@@ -466,11 +458,14 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="1532" destination="1020" kind="show"/>
+                                    <segue id="1532" destination="1020" kind="show" identifier="SegueToHowItWorks"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="TermsButton" destination="1437" id="name-outlet-1437"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1008" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
