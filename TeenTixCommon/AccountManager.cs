@@ -39,6 +39,11 @@ namespace TeenTix.Common
 			return CheckTrueFalseResult (content, url);
 		}
 
+		public static async Task<AccountValidationResult> ValidateAccount(SignUpAccount newAccount) {
+			// TODO: Ensure email, screenname, and password are valid!
+			return AccountValidationResult.ValidAccount();
+		}
+
 		public static async Task<CreateAccountResult> CreateAccount(SignUpAccount newAccount) {
 			Debug.WriteLine ("Creating new account: {0}", newAccount.ToString ());
 
