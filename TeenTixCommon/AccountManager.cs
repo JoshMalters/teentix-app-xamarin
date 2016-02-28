@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
@@ -18,6 +19,8 @@ namespace TeenTix.Common
 
 		// New accounts are assigned to group 4, which is "Pending email verification".
 		private static string DEFAULT_SIGN_UP_GROUP = "4";
+
+		private static int MINIMUM_PASSWORD_LENGTH = 5;
 
 		public AccountManager ()
 		{
@@ -40,8 +43,30 @@ namespace TeenTix.Common
 		}
 
 		public static async Task<AccountValidationResult> ValidateAccount(SignUpAccount newAccount) {
-			// TODO: Ensure email, screenname, and password are valid!
-			return AccountValidationResult.ValidAccount();
+			// Discount account validate in here. Will need to make it more robust in future.
+
+			List<String> invalidThings = new LinkedList<string> ();
+
+			var usernameAvailable = await IsUsernameAvailable (newAccount.ScreenName);
+			if (!usernameAvailable) {
+				invalidThings.Add ("username " + newAccount.ScreenName + " is not available");
+			}
+
+			var emailAvailable = await IsEmailAvailable (newAccount.Email);
+			if (!emailAvailable) {
+				invalidThings.Add ("email " + newAccount.Email + " is not available");
+			}
+
+			if (string.IsNullOrWhiteSpace (newAccount.Password) || newAccount.Password.Length >= MINIMUM_PASSWORD_LENGTH) {
+				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
+			}
+
+			if (invalidThings.Count == 0) {
+				return AccountValidationResult.ValidAccount ();
+			} else {
+				string msg = string.Join (", ", invalidThings);
+				return AccountValidationResult.InvalidAccount (msg);
+			}
 		}
 
 		public static async Task<CreateAccountResult> CreateAccount(SignUpAccount newAccount) {
