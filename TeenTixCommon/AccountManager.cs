@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
@@ -19,6 +20,8 @@ namespace TeenTix.Common
 		// New accounts are assigned to group 4, which is "Pending email verification".
 		private static string DEFAULT_SIGN_UP_GROUP = "4";
 
+		private static int MINIMUM_PASSWORD_LENGTH = 5;
+
 		public AccountManager ()
 		{
 		}
@@ -37,6 +40,54 @@ namespace TeenTix.Common
 			var url = GetUrl("/_ajax/email_check/" + email);
 			var content = await GetRequest (url);
 			return CheckTrueFalseResult (content, url);
+		}
+
+		private static bool StringIsValid(string s) {
+			return !string.IsNullOrWhiteSpace (s);
+		}
+
+		public static ValidationResult ValidateAccount(SignUpAccount newAccount) {
+			// Discount account validate in here. Will need to make it more robust in future.
+
+			List<string> invalidThings = new List<string> ();
+
+			if (!StringIsValid(newAccount.ScreenName)) {
+				invalidThings.Add ("enter valid username");
+			}
+
+			if (!StringIsValid(newAccount.Email)) {
+				invalidThings.Add ("enter valid email");
+			}
+
+			if (!StringIsValid(newAccount.Password) || newAccount.Password.Length < MINIMUM_PASSWORD_LENGTH) {
+				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
+			}
+
+			if (invalidThings.Count == 0) {
+				return ValidationResult.ValidAccount ();
+			} else {
+				string msg = string.Join (", ", invalidThings);
+				return ValidationResult.InvalidAccount (msg);
+			}
+		}
+
+		public static ValidationResult ValidateLogin(LoginRequest loginReq) {
+			List<string> invalidThings = new List<string> ();
+
+			if (!StringIsValid (loginReq.Email)) {
+				invalidThings.Add ("enter valid email");
+			}
+
+			if (!StringIsValid(loginReq.Password) || loginReq.Password.Length < MINIMUM_PASSWORD_LENGTH) {
+				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
+			}
+
+			if (invalidThings.Count == 0) {
+				return ValidationResult.ValidAccount ();
+			} else {
+				string msg = string.Join (", ", invalidThings);
+				return ValidationResult.InvalidAccount (msg);
+			}
 		}
 
 		public static async Task<CreateAccountResult> CreateAccount(SignUpAccount newAccount) {
@@ -89,7 +140,7 @@ namespace TeenTix.Common
 			// FIXME: check that both fields are set and valid. (thomasvandoren, 2016-02-22)
 
 			var qs = QueryString (
-				QueryParam("data[username]", loginRequest.Username),
+				QueryParam("data[username]", loginRequest.Email),
 				QueryParam("data[password]", loginRequest.Password),
 				QueryParam("data[new_session]", "yes")
 			);

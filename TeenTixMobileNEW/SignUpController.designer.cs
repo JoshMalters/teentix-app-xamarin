@@ -16,11 +16,11 @@ namespace TeenTixMobileNEW
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel EmailMessage { get; set; }
+		UITextField SignUpEmail { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextField SignUpEmail { get; set; }
+		UILabel SignUpMessage { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -34,19 +34,15 @@ namespace TeenTixMobileNEW
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField SignUpUsername { get; set; }
 
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel UsernameMessage { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (EmailMessage != null) {
-				EmailMessage.Dispose ();
-				EmailMessage = null;
-			}
 			if (SignUpEmail != null) {
 				SignUpEmail.Dispose ();
 				SignUpEmail = null;
+			}
+			if (SignUpMessage != null) {
+				SignUpMessage.Dispose ();
+				SignUpMessage = null;
 			}
 			if (SignUpNextButton != null) {
 				SignUpNextButton.Dispose ();
@@ -59,10 +55,6 @@ namespace TeenTixMobileNEW
 			if (SignUpUsername != null) {
 				SignUpUsername.Dispose ();
 				SignUpUsername = null;
-			}
-			if (UsernameMessage != null) {
-				UsernameMessage.Dispose ();
-				UsernameMessage = null;
 			}
 		}
 	}

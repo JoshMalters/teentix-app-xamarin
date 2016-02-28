@@ -11,18 +11,26 @@ using UIKit;
 
 namespace TeenTixMobileNEW
 {
-	[Register ("TermsController")]
-	partial class TermsController
+	[Register ("VerifyEmailController")]
+	partial class VerifyEmailController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton TermsButton { get; set; }
+		UIButton LoginButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel VerifyMessage { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (TermsButton != null) {
-				TermsButton.Dispose ();
-				TermsButton = null;
+			if (LoginButton != null) {
+				LoginButton.Dispose ();
+				LoginButton = null;
+			}
+			if (VerifyMessage != null) {
+				VerifyMessage.Dispose ();
+				VerifyMessage = null;
 			}
 		}
 	}

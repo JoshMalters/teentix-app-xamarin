@@ -100,7 +100,7 @@ namespace TeenTix.Common.UITests
 		[Test]
 		public async void Login() {
 			var loginRequest = new LoginRequest ();
-			loginRequest.Username = "thomas.vandoren+tester123@gmail.com";
+			loginRequest.Email = "thomas.vandoren+tester123@gmail.com";
 			loginRequest.Password = "000000";
 			var result = await AccountManager.Login (loginRequest);
 
@@ -111,7 +111,7 @@ namespace TeenTix.Common.UITests
 		[Test]
 		public async void Login_BadEmail() {
 			var loginRequest = new LoginRequest ();
-			loginRequest.Username = "test-" + RandomInt () + "@fake-email-address-here.com";
+			loginRequest.Email = "test-" + RandomInt () + "@fake-email-address-here.com";
 			loginRequest.Password = "000000";
 			var result = await AccountManager.Login (loginRequest);
 
@@ -122,7 +122,7 @@ namespace TeenTix.Common.UITests
 		[Test]
 		public async void Login_BadPassword() {
 			var loginRequest = new LoginRequest ();
-			loginRequest.Username = "thomas.vandoren+tester123@gmail.com";
+			loginRequest.Email = "thomas.vandoren+tester123@gmail.com";
 			loginRequest.Password = Guid.NewGuid ().ToString ();
 			var result = await AccountManager.Login (loginRequest);
 

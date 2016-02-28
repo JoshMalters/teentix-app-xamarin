@@ -12,8 +12,6 @@ namespace TeenTixMobileNEW
 	{
 		public SignUpController (IntPtr handle) : base (handle)
 		{
-
-
 		}
 
 		public override void ViewDidLoad ()
@@ -26,9 +24,9 @@ namespace TeenTixMobileNEW
 
 				Console.WriteLine(email + results);
 				if (results) {
-					EmailMessage.Text = "Your Email is Valid";
+					SignUpMessage.Text = "Your Email is Valid";
 				} else {
-					EmailMessage.Text = "Your Email is not Valid";
+					SignUpMessage.Text = "Your Email is not Valid";
 				}
 			};
 
@@ -36,28 +34,44 @@ namespace TeenTixMobileNEW
 				string username = SignUpUsername.Text;
 				bool results = await AccountManager.IsUsernameAvailable(username);
 				if (results) {
-					UsernameMessage.Text = "Your Username is Valid";
+					SignUpMessage.Text = "Your Username is Valid";
 				} else {
-					UsernameMessage.Text = "Your Username is not Valid";
+					SignUpMessage.Text = "Your Username is not Valid";
 				}
 			};
-			
-			// TODO: make async! (thomasvandoren, 2016-02-11)
-			SignUpNextButton.TouchUpInside += async (object sender, EventArgs e) => {
+		}
 
-				// FIXME: The following code is completely untested. It compiles, but that's it. (thomasvandoren, 2016-02-22)
-				var account = new SignUpAccount();
-				account.Email = SignUpEmail.Text;
-				account.ScreenName = SignUpUsername.Text;
-				account.Password = SignUpPassword.Text;
+		public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
+		{
+			if ("SegueToTerms".Equals (segueIdentifier)) {
+				var accountIsValid = AccountManager.ValidateAccount (AccountFromForm());
+				if (!accountIsValid.Valid) {
+					SignUpMessage.Text = accountIsValid.Message;
+				}
+				return accountIsValid.Valid;
+			}
+			return base.ShouldPerformSegue (segueIdentifier, sender);
+		}
 
-				// TODO: really have users set this somewhere! (thomasvandoren, 2016-02-15)
-				account.AgreedToTOS = true;
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
 
-				var result = await AccountManager.CreateAccount(account);
+			var termsController = segue.DestinationViewController as TermsController;
 
-			};
+			if (termsController != null) {
+				termsController.NewAccount = AccountFromForm ();
+			} else {
+				throw new Exception ("could not load TremsController!");
+			}
+		}
 
+		private SignUpAccount AccountFromForm() {
+			var result = new SignUpAccount ();
+			result.Email = SignUpEmail.Text;
+			result.ScreenName = SignUpUsername.Text;
+			result.Password = SignUpPassword.Text;
+			return result;
 		}
 	}
 }

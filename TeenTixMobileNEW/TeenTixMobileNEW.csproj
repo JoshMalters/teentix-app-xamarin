@@ -154,10 +154,6 @@
     <Compile Include="SignUpOptionsController.designer.cs">
       <DependentUpon>SignUpOptionsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePageController_.cs" />
-    <Compile Include="HomePageController_.designer.cs">
-      <DependentUpon>HomePageController_.cs</DependentUpon>
-    </Compile>
     <Compile Include="GenresController_.cs" />
     <Compile Include="GenresController_.designer.cs">
       <DependentUpon>GenresController_.cs</DependentUpon>
@@ -202,10 +198,6 @@
     <Compile Include="BrowserController.designer.cs">
       <DependentUpon>BrowserController.cs</DependentUpon>
     </Compile>
-    <Compile Include="TermsButton.cs" />
-    <Compile Include="TermsButton.designer.cs">
-      <DependentUpon>TermsButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="HowItWorksButton.cs" />
     <Compile Include="HowItWorksButton.designer.cs">
       <DependentUpon>HowItWorksButton.cs</DependentUpon>
@@ -249,6 +241,14 @@
     <Compile Include="PartnersNavBar.cs" />
     <Compile Include="PartnersNavBar.designer.cs">
       <DependentUpon>PartnersNavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostLoginController.cs" />
+    <Compile Include="PostLoginController.designer.cs">
+      <DependentUpon>PostLoginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyEmailController.cs" />
+    <Compile Include="VerifyEmailController.designer.cs">
+      <DependentUpon>VerifyEmailController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

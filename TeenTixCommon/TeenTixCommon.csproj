@@ -44,6 +44,8 @@
     <Compile Include="Model\LoginResponseData.cs" />
     <Compile Include="Model\LoginResult.cs" />
     <Compile Include="Util\Optional.cs" />
+    <Compile Include="Model\ValidationResult.cs" />
+    <Compile Include="RestAPI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

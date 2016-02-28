@@ -44,7 +44,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="602" destination="511" kind="showDetail"/>
+                                    <segue id="2380" destination="945" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,12 +74,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="233" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="189" y="113" width="97" height="30"/>
+                                <rect key="frame" x="113" y="113" width="242" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="234" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="189" y="158" width="97" height="30"/>
+                                <rect key="frame" x="113" y="158" width="242" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -93,29 +93,22 @@
                                 </state>
                                 <connections/>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" minimumFontSize="10" id="720" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="89" y="118" width="86" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email" lineBreakMode="tailTruncation" minimumFontSize="10" id="720" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="113" width="86" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" minimumFontSize="10" id="721" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="89" y="162" width="86" height="21"/>
+                                <rect key="frame" x="20" y="157" width="86" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="913" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="113" y="279" width="149" height="33"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="914" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="113" y="317" width="149" height="33"/>
+                                <rect key="frame" x="20" y="279" width="335" height="33"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -124,13 +117,16 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="loginEmailMessage" destination="913" id="name-outlet-913"/>
-                        <outlet property="loginUsernameMessage" destination="914" id="name-outlet-914"/>
+                        <outlet property="LoginMessage" destination="913" id="name-outlet-913"/>
+                        <outlet property="LoginButton" destination="235" id="name-outlet-235"/>
+                        <outlet property="LoginEmail" destination="233" id="name-outlet-233"/>
+                        <outlet property="LoginPassword" destination="234" id="name-outlet-234"/>
+                        <segue id="2332" destination="2216" kind="show" identifier="SegueToPostLoginManual"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="230" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="-131"/>
+            <point key="canvasLocation" x="106" y="727"/>
         </scene>
         <scene sceneID="510">
             <objects>
@@ -160,7 +156,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="1371" destination="1006" kind="show"/>
+                                    <segue id="1371" destination="1006" kind="show" identifier="SegueToTerms"/>
                                 </connections>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute keyPath="accessibilityIdentifier" type="string" value="SignUpNextButton"/>
@@ -203,14 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="911" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="119" y="323" width="149" height="33"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="912" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="119" y="364" width="149" height="33"/>
+                                <rect key="frame" x="20" y="323" width="335" height="33"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -230,13 +219,12 @@
                         <outlet property="SignUpEmail" destination="713" id="name-outlet-713"/>
                         <outlet property="SignUpUsername" destination="711" id="name-outlet-711"/>
                         <outlet property="SignUpPassword" destination="714" id="name-outlet-714"/>
-                        <outlet property="EmailMessage" destination="911" id="name-outlet-911"/>
-                        <outlet property="UsernameMessage" destination="912" id="name-outlet-912"/>
+                        <outlet property="SignUpMessage" destination="911" id="name-outlet-911"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="513" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="-253"/>
+            <point key="canvasLocation" x="1066" y="-9"/>
         </scene>
         <scene sceneID="611">
             <objects>
@@ -276,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="614" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="351"/>
+            <point key="canvasLocation" x="1684" y="1614"/>
         </scene>
         <scene sceneID="944">
             <objects>
@@ -337,27 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="947" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="-315"/>
-        </scene>
-        <scene sceneID="951">
-            <objects>
-                <viewController id="952" sceneMemberID="viewController" customClass="HomePageController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="949"/>
-                        <viewControllerLayoutGuide type="bottom" id="950"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="953" customClass="HomePageController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                        <subviews/>
-                    </view>
-                    <connections/>
-                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="954" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-177" y="648"/>
+            <point key="canvasLocation" x="186" y="-225"/>
         </scene>
         <scene sceneID="958">
             <objects>
@@ -375,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="961" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="665"/>
+            <point key="canvasLocation" x="-136" y="1611"/>
         </scene>
         <scene sceneID="965">
             <objects>
@@ -393,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="968" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="701"/>
+            <point key="canvasLocation" x="296" y="1626"/>
         </scene>
         <scene sceneID="979">
             <objects>
@@ -411,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="982" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="698"/>
+            <point key="canvasLocation" x="716" y="1623"/>
         </scene>
         <scene sceneID="986">
             <objects>
@@ -429,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="989" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="663"/>
+            <point key="canvasLocation" x="1144" y="1618"/>
         </scene>
         <scene sceneID="1005">
             <objects>
@@ -458,23 +426,26 @@
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1437" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customClass="TermsButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1437" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
                                 <state key="normal" title="I Agree!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
-                                <connections>
-                                    <segue id="1532" destination="1020" kind="show"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="TermsButton" destination="1437" id="name-outlet-1437"/>
+                        <segue id="2436" destination="2385" kind="show" identifier="SegueToVerifyEmail"/>
+                        <segue id="2538" destination="511" kind="show" identifier="SegueToSignUpOnError"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1008" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-613"/>
+            <point key="canvasLocation" x="1610" y="-13"/>
         </scene>
         <scene sceneID="1019">
             <objects>
@@ -500,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1022" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="-450"/>
+            <point key="canvasLocation" x="2648" y="-12"/>
         </scene>
         <scene sceneID="1204">
             <objects>
@@ -524,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1207" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-249"/>
+            <point key="canvasLocation" x="1069" y="-814"/>
         </scene>
         <scene sceneID="1543">
             <objects>
@@ -550,7 +521,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917" y="361"/>
+            <point key="canvasLocation" x="2145" y="1610"/>
+        </scene>
+        <scene sceneID="2215">
+            <objects>
+                <viewController id="2216" sceneMemberID="viewController" customClass="PostLoginController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2213"/>
+                        <viewControllerLayoutGuide type="bottom" id="2214"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2217">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Login Session" lineBreakMode="tailTruncation" minimumFontSize="10" id="2220" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="80" y="80" width="164" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="71" y="161" width="160" height="240"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="LoginSession" destination="2221" id="name-outlet-2221"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2218" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="732"/>
+        </scene>
+        <scene sceneID="2384">
+            <objects>
+                <viewController id="2385" sceneMemberID="viewController" customClass="VerifyEmailController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2382"/>
+                        <viewControllerLayoutGuide type="bottom" id="2383"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2386">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2389" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="369" width="375" height="60"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.4" alpha="1"/>
+                                <state key="normal" title="Login!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections/>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2392" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="5">
+                                <rect key="frame" x="20" y="232" width="335" height="112"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <string key="text">Congratulation! Your TeenTix account has been created. You should receive an email asking your to verify your account. Once you visit the link in that email, tap Login! below to get started using the TeenTix.</string>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VERIFY EMAIL" lineBreakMode="tailTruncation" minimumFontSize="10" id="2393" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="83" width="375" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2483" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="478" width="335" height="33"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="2389" id="name-outlet-2389"/>
+                        <segue id="2480" destination="1020" kind="show" identifier="SegueToHowItWorks"/>
+                        <outlet property="VerifyMessage" destination="2483" id="name-outlet-2483"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2387" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="-13"/>
         </scene>
     </scenes>
     <resources>
