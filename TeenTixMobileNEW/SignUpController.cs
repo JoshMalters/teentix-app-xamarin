@@ -10,6 +10,7 @@ namespace TeenTixMobileNEW
 {
 	partial class SignUpController : UIViewController
 	{
+
 		public SignUpController (IntPtr handle) : base (handle)
 		{
 
@@ -41,23 +42,25 @@ namespace TeenTixMobileNEW
 					UsernameMessage.Text = "Your Username is not Valid";
 				}
 			};
-			
-			// TODO: make async! (thomasvandoren, 2016-02-11)
-			SignUpNextButton.TouchUpInside += async (object sender, EventArgs e) => {
 
-				// FIXME: The following code is completely untested. It compiles, but that's it. (thomasvandoren, 2016-02-22)
-				var account = new SignUpAccount();
-				account.Email = SignUpEmail.Text;
-				account.ScreenName = SignUpUsername.Text;
-				account.Password = SignUpPassword.Text;
+		}
 
-				// TODO: really have users set this somewhere! (thomasvandoren, 2016-02-15)
-				account.AgreedToTOS = true;
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
 
-				var result = await AccountManager.CreateAccount(account);
+			Console.WriteLine ("TEENTIX: Inside PrepareForSeque");
+			var termsController = segue.DestinationViewController as TermsController;
 
-			};
-
+			Console.WriteLine ("termsController = {0}", termsController);
+			if (termsController != null) {
+				termsController.NewAccount = new SignUpAccount();
+				termsController.NewAccount.Email = SignUpEmail.Text;
+				termsController.NewAccount.ScreenName = SignUpUsername.Text;
+				termsController.NewAccount.Password = SignUpPassword.Text;;
+			} else {
+				throw new Exception ("could not load TremsController!");
+			}
 		}
 	}
 }
