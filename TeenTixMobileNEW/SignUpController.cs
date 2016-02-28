@@ -69,6 +69,14 @@ namespace TeenTixMobileNEW
 				}
 			};
 		}
+
+		public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
+		{
+
+
+			return base.ShouldPerformSegue (segueIdentifier, sender);
+		}
+
 //
 //		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 //		{
