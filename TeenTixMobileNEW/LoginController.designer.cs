@@ -16,21 +16,37 @@ namespace TeenTixMobileNEW
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel loginEmailMessage { get; set; }
+		UIButton LoginButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel loginUsernameMessage { get; set; }
+		UITextField LoginEmail { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel LoginMessage { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField LoginPassword { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (loginEmailMessage != null) {
-				loginEmailMessage.Dispose ();
-				loginEmailMessage = null;
+			if (LoginButton != null) {
+				LoginButton.Dispose ();
+				LoginButton = null;
 			}
-			if (loginUsernameMessage != null) {
-				loginUsernameMessage.Dispose ();
-				loginUsernameMessage = null;
+			if (LoginEmail != null) {
+				LoginEmail.Dispose ();
+				LoginEmail = null;
+			}
+			if (LoginMessage != null) {
+				LoginMessage.Dispose ();
+				LoginMessage = null;
+			}
+			if (LoginPassword != null) {
+				LoginPassword.Dispose ();
+				LoginPassword = null;
 			}
 		}
 	}

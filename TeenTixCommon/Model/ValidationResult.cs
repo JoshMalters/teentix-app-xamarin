@@ -2,12 +2,12 @@
 
 namespace TeenTix.Common.Model
 {
-	public class AccountValidationResult
+	public class ValidationResult
 	{
 		public bool Valid { get; set; }
 		public string Message { get; set; }
 	
-		public AccountValidationResult ()
+		public ValidationResult ()
 		{
 		}
 
@@ -16,14 +16,14 @@ namespace TeenTix.Common.Model
 			return string.Format ("[AccountValidationResult: Valid={0}, Message={1}]", Valid, Message);
 		}
 
-		public static AccountValidationResult ValidAccount() {
-			var result = new AccountValidationResult();
+		public static ValidationResult ValidAccount() {
+			var result = new ValidationResult();
 			result.Valid = true;
 			return result;
 		}
 
-		public static AccountValidationResult InvalidAccount(string message) {
-			var result = new AccountValidationResult();
+		public static ValidationResult InvalidAccount(string message) {
+			var result = new ValidationResult();
 			result.Valid = false;
 			result.Message = message;
 			return result;

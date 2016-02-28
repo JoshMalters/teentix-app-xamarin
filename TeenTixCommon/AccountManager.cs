@@ -46,10 +46,10 @@ namespace TeenTix.Common
 			return !string.IsNullOrWhiteSpace (s);
 		}
 
-		public static AccountValidationResult ValidateAccount(SignUpAccount newAccount) {
+		public static ValidationResult ValidateAccount(SignUpAccount newAccount) {
 			// Discount account validate in here. Will need to make it more robust in future.
 
-			List<String> invalidThings = new List<string> ();
+			List<string> invalidThings = new List<string> ();
 
 			if (!StringIsValid(newAccount.ScreenName)) {
 				invalidThings.Add ("enter valid username");
@@ -64,10 +64,29 @@ namespace TeenTix.Common
 			}
 
 			if (invalidThings.Count == 0) {
-				return AccountValidationResult.ValidAccount ();
+				return ValidationResult.ValidAccount ();
 			} else {
 				string msg = string.Join (", ", invalidThings);
-				return AccountValidationResult.InvalidAccount (msg);
+				return ValidationResult.InvalidAccount (msg);
+			}
+		}
+
+		public static ValidationResult ValidateLogin(LoginRequest loginReq) {
+			List<string> invalidThings = new List<string> ();
+
+			if (!StringIsValid (loginReq.Email)) {
+				invalidThings.Add ("enter valid email");
+			}
+
+			if (!StringIsValid(loginReq.Password) || loginReq.Password.Length < MINIMUM_PASSWORD_LENGTH) {
+				invalidThings.Add ("password must be " + MINIMUM_PASSWORD_LENGTH + " or more characters");
+			}
+
+			if (invalidThings.Count == 0) {
+				return ValidationResult.ValidAccount ();
+			} else {
+				string msg = string.Join (", ", invalidThings);
+				return ValidationResult.InvalidAccount (msg);
 			}
 		}
 
@@ -121,7 +140,7 @@ namespace TeenTix.Common
 			// FIXME: check that both fields are set and valid. (thomasvandoren, 2016-02-22)
 
 			var qs = QueryString (
-				QueryParam("data[username]", loginRequest.Username),
+				QueryParam("data[username]", loginRequest.Email),
 				QueryParam("data[password]", loginRequest.Password),
 				QueryParam("data[new_session]", "yes")
 			);
