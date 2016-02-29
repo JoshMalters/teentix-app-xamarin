@@ -250,6 +250,14 @@
     <Compile Include="VerifyEmailController.designer.cs">
       <DependentUpon>VerifyEmailController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeController.cs" />
+    <Compile Include="HomeController.designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritesController.cs" />
+    <Compile Include="FavoritesController.designer.cs">
+      <DependentUpon>FavoritesController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
