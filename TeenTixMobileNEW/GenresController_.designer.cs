@@ -14,5 +14,16 @@ namespace TeenTixMobileNEW
 	[Register ("GenresController")]
 	partial class GenresController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UISearchDisplayController searchDisplayController { get; set; }
+
+		void ReleaseDesignerOutlets ()
+		{
+			if (searchDisplayController != null) {
+				searchDisplayController.Dispose ();
+				searchDisplayController = null;
+			}
+		}
 	}
 }
