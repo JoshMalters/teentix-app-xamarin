@@ -235,13 +235,10 @@
                         <viewControllerLayoutGuide type="bottom" id="610"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="613">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="904" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="teentixlogo.tif">
-                                <rect key="frame" x="38" y="178" width="300" height="299"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2949" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="126" y="140" width="123" height="30"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.6" alpha="1"/>
@@ -262,7 +259,20 @@
                                 <state key="normal" title="PARTNERS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue id="5625" destination="1544" kind="show"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="5036" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="teentixlogo.tif">
+                                <rect key="frame" x="38" y="204" width="300" height="299"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="YOUR PASS" lineBreakMode="tailTruncation" minimumFontSize="10" id="5383" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="211" width="375" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -273,12 +283,12 @@
                             <accessibilityTraits key="traits" none="YES" button="YES"/>
                         </accessibility>
                     </navigationItem>
-                    <tabBarItem key="tabBarItem" title="Pass" id="3893"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="614" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-238"/>
+            <point key="canvasLocation" x="2327" y="-848"/>
         </scene>
         <scene sceneID="944">
             <objects>
@@ -459,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="968" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="596"/>
+            <point key="canvasLocation" x="1492" y="609"/>
         </scene>
         <scene sceneID="979">
             <objects>
@@ -523,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="982" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="579"/>
+            <point key="canvasLocation" x="1953" y="613"/>
         </scene>
         <scene sceneID="986">
             <objects>
@@ -632,9 +642,7 @@ Okay? </string>
                                 <state key="normal" title="HOW IT WORKS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue id="3277" destination="612" kind="show"/>
-                                </connections>
+                                <connections/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2947" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="126" y="142" width="123" height="30"/>
@@ -643,7 +651,7 @@ Okay? </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="3471" destination="612" kind="show"/>
+                                    <segue id="5489" destination="612" kind="show"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2948" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -652,16 +660,16 @@ Okay? </string>
                                 <state key="normal" title="PARTNERS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue id="3633" destination="1544" kind="show"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Pass" id="5031"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1022" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="-246"/>
+            <point key="canvasLocation" x="1710" y="-231"/>
         </scene>
         <scene sceneID="1204">
             <objects>
@@ -675,8 +683,8 @@ Okay? </string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="1564" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" scalesPageToFit="YES">
-                                <rect key="frame" x="18" y="77" width="342" height="577"/>
+                            <webView contentMode="scaleToFill" id="1564" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" scalesPageToFit="YES" customClass="PassWebViewController">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" phoneNumber="YES"/>
                             </webView>
@@ -695,23 +703,26 @@ Okay? </string>
                         <viewControllerLayoutGuide type="bottom" id="1542"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1545">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2952" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="143" width="123" height="30"/>
+                                <rect key="frame" x="126" y="142" width="123" height="30"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.6" alpha="1"/>
                                 <state key="normal" title="TEEN TIX PASS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2953" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="126" y="143" width="123" height="30"/>
+                                <rect key="frame" x="0.0" y="142" width="123" height="30"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.8" green="1" blue="0.2" alpha="1"/>
                                 <state key="normal" title="HOW IT WORKS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue id="5663" destination="1020" kind="show"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2954" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="252" y="142" width="123" height="30"/>
@@ -720,12 +731,19 @@ Okay? </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PARTNERS" lineBreakMode="tailTruncation" minimumFontSize="10" id="5384" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="0.0" y="232" width="375" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1546" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2579" y="-237"/>
+            <point key="canvasLocation" x="2802" y="-197"/>
         </scene>
         <scene sceneID="2215">
             <objects>
@@ -752,6 +770,17 @@ Okay? </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4919" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="435" width="375" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.8" blue="0.2" alpha="1"/>
+                                <state key="normal" title="Continue!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <segue id="4990" destination="1020" kind="show"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -825,7 +854,7 @@ Once you visit the link in that email, tap Login! below to get started using the
         </scene>
         <scene sceneID="2562">
             <objects>
-                <navigationController definesPresentationContext="YES" id="2563" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="2563" sceneMemberID="viewController" customClass="NavigationController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2566">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <rect key="frame" x="0.0" y="20" width="430" height="44"/>
@@ -838,36 +867,9 @@ Once you visit the link in that email, tap Login! below to get started using the
             </objects>
             <point key="canvasLocation" x="-1376" y="-48"/>
         </scene>
-        <scene sceneID="3662">
-            <objects>
-                <viewController id="3663" sceneMemberID="viewController" customClass="HomeController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3660"/>
-                        <viewControllerLayoutGuide type="bottom" id="3661"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3664">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" id="3667" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="POPULAR EVENTS" id="3668"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="3725"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3665" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="618" y="576"/>
-        </scene>
         <scene sceneID="3673">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="3674" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="3674" sceneMemberID="viewController" customClass="TabBarController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3679">
                         <rect key="frame" x="0.0" y="618" width="375" height="49"/>
@@ -875,13 +877,7 @@ Once you visit the link in that email, tap Login! below to get started using the
                         <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
                         <color key="barTintColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
                     </tabBar>
-                    <connections>
-                        <segue id="3726" destination="3663" kind="relationship" relationship="viewControllers"/>
-                        <segue id="4025" destination="966" kind="relationship" relationship="viewControllers"/>
-                        <segue id="4110" destination="612" kind="relationship" relationship="viewControllers"/>
-                        <segue id="4166" destination="959" kind="relationship" relationship="viewControllers"/>
-                        <segue id="4240" destination="3899" kind="relationship" relationship="viewControllers"/>
-                    </connections>
+                    <connections/>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3680" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -905,6 +901,25 @@ Once you visit the link in that email, tap Login! below to get started using the
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3901" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2811" y="589"/>
+        </scene>
+        <scene sceneID="5039">
+            <objects>
+                <viewController id="5040" sceneMemberID="viewController" customClass="PopularEventController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5037"/>
+                        <viewControllerLayoutGuide type="bottom" id="5038"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5041">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="0.8" alpha="1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5091"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5042" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="583"/>
         </scene>
     </scenes>
     <resources>

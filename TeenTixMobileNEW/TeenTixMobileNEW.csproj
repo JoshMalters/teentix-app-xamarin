@@ -206,10 +206,6 @@
     <Compile Include="SponsorController_.designer.cs">
       <DependentUpon>SponsorController_.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavTabBar.cs" />
-    <Compile Include="NavTabBar.designer.cs">
-      <DependentUpon>NavTabBar.cs</DependentUpon>
-    </Compile>
     <Compile Include="HomeNavBar.cs" />
     <Compile Include="HomeNavBar.designer.cs">
       <DependentUpon>HomeNavBar.cs</DependentUpon>
@@ -250,13 +246,29 @@
     <Compile Include="VerifyEmailController.designer.cs">
       <DependentUpon>VerifyEmailController.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeController.cs" />
-    <Compile Include="HomeController.designer.cs">
-      <DependentUpon>HomeController.cs</DependentUpon>
-    </Compile>
     <Compile Include="FavoritesController.cs" />
     <Compile Include="FavoritesController.designer.cs">
       <DependentUpon>FavoritesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopularEventController.cs" />
+    <Compile Include="PopularEventController.designer.cs">
+      <DependentUpon>PopularEventController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationController.cs" />
+    <Compile Include="NavigationController.designer.cs">
+      <DependentUpon>NavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassWebViewController.cs" />
+    <Compile Include="PassWebViewController.designer.cs">
+      <DependentUpon>PassWebViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabBar.cs" />
+    <Compile Include="TabBar.designer.cs">
+      <DependentUpon>TabBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabBarController.cs" />
+    <Compile Include="TabBarController.designer.cs">
+      <DependentUpon>TabBarController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
